@@ -1,0 +1,16 @@
+.button{
+    width: 100px;
+    height: 100px;
+}
+#grey{
+    background-color: grey;
+}
+#white{
+    background-color:white;
+}
+#blue{
+    background-color: blue;
+}
+#yellow{
+    background-color:yellow;
+}

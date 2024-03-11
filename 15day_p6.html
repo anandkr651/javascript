@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1> chai aur javasscript</h1>
+    <button id="start">start</button>
+    <button id="stop">stop</button>
+</body>
+<script>
+
+ const saydate = function(){
+    console.log("hitesh",Date.now());
+   }
+  // const intervalid = setInterval(saydate,2000)
+   //clearInterval(intervalid)
+   let intervalid;
+   
+   document.querySelector('#start').addEventListener('click',function(){
+   intervalid= setInterval(saydate,1000);    
+    console.log("started");
+   })
+   document.querySelector('#stop').addEventListener('click',function(){
+    clearTimeout(intervalid)
+    console.log("stopped");
+   })
+
+/*const saydate = function(){
+    console.log("hitesh",Date.now());
+}
+let intervalid;
+const hello = function(){
+    if(!intervalid){
+        intervalid = setInterval(saydate,1000)
+        console.log("started");
+    }
+}
+const bye = function(){
+    clearInterval(intervalid)
+        intervalid = null;
+        console.log("stopped");
+}
+document.querySelector('#start').addEventListener('click',hello)
+document.querySelector('#stop').addEventListener('click',bye)
+*/
+      </script>
+</html>

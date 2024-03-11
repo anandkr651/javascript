@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+<script>
+    console.log(Math.PI);
+    Math.PI=5
+    console.log(Math.PI);
+
+const descripter= Object.getOwnPropertyDescriptor(Math,"PI")
+console.log(descripter);
+
+//const mynewObject = Object.create(null)
+const chai ={
+    name:'ginger chai',
+    price:250,
+    isavailable:true,
+
+    orderchai: function(){
+        console.log("chai nahi bani");
+    }
+}
+console.log(chai);
+console.log(Object.getOwnPropertyDescriptor(chai,"name"));
+Object.defineProperty(chai,'name',{
+    //writable:false,
+    enumerable:true,
+    configurable:false
+})
+console.log(Object.getOwnPropertyDescriptor(chai,"name"));
+   
+for (let[key,value] of Object.entries(chai)) {
+    if(typeof value !== 'function'){
+        console.log(`${key} :${value}`);   
+    }
+}
+
+</script>
+</html>
