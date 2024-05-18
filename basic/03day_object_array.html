@@ -38,8 +38,8 @@
         // console.log("B",myarray);
 
         const mya2 = myarray.splice(2, 3)
-        // console.log(mya2);        //remove the element from 2 to 3
-        // console.log("C", myarray);  //bacca hua elements in myarray
+        console.log(mya2);        //remove the element from 2 to 3
+        console.log("C", myarray);  //bacca hua elements in myarray
 
 
         const marvel_heros = ["thor", "ironman", "spiderman"];
@@ -93,7 +93,7 @@
 
         jsuser.accountemail = "anand@21434.com";
         // console.log(jsuser.accountemail);
-        // Object.freeze(jsuser)
+        // Object.freeze(jsuser)             //important
         jsuser.accountemail = "anand@21.com";
         // console.log(jsuser.accountemail);
 
@@ -117,7 +117,12 @@
         tinderusera.name = "sanjay"
         tinderusera.isloggein = false
 
-        //console.log(tinderusera);
+        // console.log(tinderusera);
+        // console.log(Object.keys(tinderusera));
+        // console.log(Object.values(tinderusera));
+        // console.log(Object.entries(tinderusera));
+
+        // console.log(tinderusera.hasOwnProperty('isloggein'));
 
         const regularuser = {
             email: "some@gmail.com",
@@ -158,12 +163,6 @@
         ]
 
         users[2].email
-        // console.log(tinderusera);
-        // console.log(Object.keys(tinderusera));
-        // console.log(Object.values(tinderusera));
-        // console.log(Object.entries(tinderusera));
-
-        // console.log(tinderusera.hasOwnProperty('isloggein'));
 
         const course = {
             coursename: "js in hindi",
