@@ -37,4 +37,5 @@ p{
 #newgame{
     background-color: aqua;
     display: inline;
+    cursor: pointer;
 }

@@ -2,7 +2,7 @@ const buttons = document.querySelectorAll('.button');
 const form = document.querySelector('form');
 const body = document.querySelector("body")
 
-   form.addEventListener('submit',function(e){
+   form.addEventListener('click',function(e){
       e.preventDefault();
 
  buttons.forEach(function(button){

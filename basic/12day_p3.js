@@ -1,11 +1,11 @@
  let randomNumber = (parseInt(Math.random()*100 +1));
 
-const submit = document.querySelector('#subt');
 const userinput = document.querySelector('#guessfield');
+const submit = document.querySelector('#subt');
+const startover = document.querySelector('.resultparas');
 const guessslot = document.querySelector('.guesses');
 const remaining = document.querySelector('.lastresult');
 const loworhi = document.querySelector('.loworhi');
-const startover = document.querySelector('.resultparas');
 
 
 const p = document.createElement('p');
