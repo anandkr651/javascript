@@ -34,11 +34,11 @@ container.addEventListener('click',()=>{
     console.log('click on container');
 },true)
 
-const nameinput = doucment.getElementById('nameinput');
+const nameinput = document.getElementById('nameinput');
 nameinput.addEventListener('keypress',(e)=>{
     console.log('key',e.key);
 })
 
-// box1.addEventListener('mousemove',(e)=>{
-//     console.log('event object',e);
-//  })
+box1.addEventListener('mousemove',(e)=>{
+    console.log('event object',e);
+ })

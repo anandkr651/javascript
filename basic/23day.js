@@ -3,9 +3,9 @@ function multipleby5(num){
 }
 multipleby5.power = 2;
 
-// console.log(multipleby5.power);
-// console.log(multipleby5(5));
-// console.log(multipleby5.prototype);
+console.log(multipleby5.power);
+console.log(multipleby5(5));
+console.log(multipleby5.prototype);
 
 function createuser(username,score){
     this.username=username;
@@ -17,10 +17,13 @@ createuser.prototype.increment = function(){
 }
 
 createuser.prototype.printme = function(){
-   // console.log(`score is ${this.score}`);
+   console.log(`score is ${this.score}`);
 }
 const chai = new createuser("chai",25);
 const tea  =  new createuser("tea",250);
+
+// chai.increment();
+// tea.increment();
 
 chai.printme();
 tea.printme();
@@ -34,7 +37,7 @@ the new object is returned : after the constructor function has been called, if 
 
 let myname = "hitesh          "
 let mychannel = " chai     "
-//console.log(myname.truelength);
+// console.log(myname.truelength);
 
 
 
@@ -51,9 +54,9 @@ let heropower = {
 Object.prototype.hitesh = function(){
     console.log(`hitesh is present in all object`);
 }
-//heropower.hitesh()
+heropower.hitesh()
 
-//myhero.hitesh()
+myhero.hitesh()
 
 Array.prototype.heyhitesh = function(){
     console.log(`hitesh say hello`);
@@ -83,7 +86,6 @@ teacher.__proto__=user
 
 //modern syntax
 Object.setPrototypeOf(teachingsupport,teacher)
-
 
 
 let anotherusername = "chaiaurcode        "

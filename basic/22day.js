@@ -4,14 +4,14 @@ logincount : 8,
 signedin : true,
 
 getuserdetails : function(){
-    console.log("got user detailsfrom database");
+    console.log("got user details from database");
     console.log(`username:${this.username}`);
     console.log(this);
 }
 }
-// console.log(users.username);
-// console.log(users.getuserdetails());
-// console.log(this);
+console.log(users.username);
+console.log(users.getuserdetails());
+console.log(this);
 
 
 // const promiseone = new Promise()

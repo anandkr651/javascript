@@ -15,8 +15,8 @@ changeusername(){
 }
 
 const chai =new user ("chai","chai@gmail.com","12345")
-// console.log(chai.encryptpassword());
-// console.log(chai.changeusername());
+console.log(chai.encryptpassword());
+console.log(chai.changeusername());
 
 
 
@@ -36,9 +36,9 @@ function usera(username,email,password){
     return `${this.username.toUpperCase()}`
   }
 
-  const tea =new usera ("tea","tea@gmail.com","123")
-// console.log(tea.encryptpassword());
-// console.log(tea.changeusername());
+const tea =new usera ("tea","tea@gmail.com","123")
+console.log(tea.encryptpassword());
+console.log(tea.changeusername());
 
 
 //inheritance
@@ -48,7 +48,7 @@ class userb {
         this.username=username
     }
     logme(){
-        //console.log(`username is ${this.username}`);
+        console.log(`username is ${this.username}`);
     }
 }
 
@@ -59,7 +59,7 @@ class teacher extends userb{
         this.password=password
     }
     addcourse(){
-       // console.log(`a new course was added by ${this.username}`);
+       console.log(`a new course was added by ${this.username}`);
     }
 }
 const chaia = new teacher("chaia","chaia@gmail.com","123")
@@ -99,4 +99,4 @@ class teachera extends userc{
 
 const iphone = new teachera("iphone","i@phone.com")
 iphone.logme();
-console.log(iphone.createid());
+// console.log(iphone.createid());
