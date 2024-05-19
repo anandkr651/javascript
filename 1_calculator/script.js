@@ -1,47 +1,36 @@
-const buttons = document.querySelectorAll('.button');
-const form = document.querySelector('form');
-const body = document.querySelector("body")
+const buttons=document.querySelectorAll('.button');
+const first=document.querySelector('#first');
+const second=document.querySelector('#second');
+const results=document.querySelector('#results');
 
-   form.addEventListener('click',function(e){
-      e.preventDefault();
+buttons.forEach(function(buttn){
+buttn.addEventListener('click',function(e){
+   e.preventDefault();
+   const one=parseInt(first.value);
+   const two=parseInt(second.value);
+   
 
- buttons.forEach(function(button){
-    button.addEventListener('click',function(e){
-      // console.log(e.target);
-
-const results = document.querySelector('#results')
-const first = parseInt(document.querySelector('#first').value);
-const second = parseInt(document.querySelector('#second').value);
-
- if(first === '' || first < 0 || isNaN(first)) {
-    results.innerHTML = `please give the positive number ${first}`;
- } 
- else if(second === '' || second < 0 || isNaN(second)){
-    results.innerHTML = `please give the positive number ${second}`;
-}
-else{
- if(e.target.id==='addition'){
-   const sum = (first + second);
-    results.innerHTML = `<span>${sum}</span>`;
-   //  body.style.backgroundColor= 'yellow'
-
- }
- else if(e.target.id==='substrction'){
-   const sub = (first - second);
-   results.innerHTML = `<span>${sub}</span>`;
-   // body.style.backgroundColor='green'
-}
-else if(e.target.id==='multiplication'){
-   const mul = (first * second);
-   results.innerHTML = `<span>${mul}</span>`;
-   // body.style.backgroundColor= 'orange'
-}
-else if(e.target.id==='division'){
-   const div = (first / second);
-   results.innerHTML = `<span>${div}</span>`;
-   // body.style.backgroundColor= 'blue'
-}
-}
-    })
+   if(one === '' || one < 0 || isNaN(one)) {
+          results.innerHTML = `please give the positive number ${first}`;
+       } 
+       else if(two === '' || two < 0 || isNaN(two)){
+          results.innerHTML = `please give the positive number ${second}`;
+      }
+      else if(e.target.id==='addition'){
+            const add = (one + two);
+            results.innerHTML = `<span>${add}</span>`;
+         }
+      else if(e.target.id==='substrction'){
+            const sub = (one - two);
+            results.innerHTML = `<span>${sub}</span>`;
+         }
+      else if(e.target.id==='multiplication'){
+            const mul = (one * two);
+            results.innerHTML = `<span>${mul}</span>`;
+         }
+      else if(e.target.id==='division'){
+            const div = (one / two);
+            results.innerHTML = `<span>${div}</span>`;
+         }
    })
 })
