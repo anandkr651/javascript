@@ -1,5 +1,5 @@
 /* most important thing is the images are come from the unsplash website
-when we search the url (https://api.unsplash.com/search/photos?page=1&query=office&client_id=_vajmlb30FimqyDyo9x_E_rl7KUbHkCO6GCazkyGp1s) in then jason formate available */
+when we search the url (https://api.unsplash.com/search/photos?page=1&query=office&client_id=_vajmlb30FimqyDyo9x_E_rl7KUbHkCO6GCazkyGp1s) in then json formate available */
 
 const accesskey = "_vajmlb30FimqyDyo9x_E_rl7KUbHkCO6GCazkyGp1s"
 const searchform=document.getElementById('search-form');
@@ -16,7 +16,7 @@ async function searchimages(){
 
     const response=await fetch(url);
     const data=await response.json();
-    // console.log(data);
+    console.log(data);
 
 if(page===1)
     {

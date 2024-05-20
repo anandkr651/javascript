@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>lexical scoping and closure</title>
+</head>
+<body>
+    <button id="orange">orange</button>
+    <button id="green">green</button>
+</body>
+<!-- <script>
+/* lexical scoping*/
+
+//     function init() {
+//       let name = "Mozilla";
+//       function displayName() { 
+//           console.log(name);
+//         }
+//       displayName();
+//     }
+// init();
+
+// function outer(){
+//     let username="hitesh";
+//     // console.log("outer",say);
+//     function innerone(){
+//         let say="bolo";
+//         console.log("too innerone",username);
+//     }
+//     innerone();
+//     function innertwo(){
+//         console.log("too innertwo",username);
+//         // console.log("too innertwo",say); //sibling function does not share any variable
+//     }
+//     innertwo();
+// }
+// outer();
+// // console.log("too outer",username); //error because it is the out of scope
+
+/*Closures scoping*/
+function makeFunc() {
+  const name = "Mozilla";
+  function displayName() {
+    console.log(name);
+  }
+  return displayName;  //sirf displayName nahi jayaga agar iska outer function bhi exist karata hai to wah bhi jayaga
+}
+
+const myFunc = makeFunc();
+myFunc();
+</script> -->
+<script>
+
+// document.getElementById('orange').onclick=function(){
+//     document.body.style.background='orange';
+// }
+// document.getElementById('green').onclick=function(){
+//     document.body.style.background='green';
+// }
+
+function clickhandler(color){
+    // document.body.style.background=`${color}`;
+    return function(){
+        document.body.style.background=`${color}`;      
+    }
+
+}
+document.getElementById('orange').onclick=clickhandler('orange');
+document.getElementById('green').onclick=clickhandler('green');
+</script>
+</html>
