@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact form</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <div class="container">
+    <h1>Contact Us</h1>
+    <form class="form" autocomplete="off">
+      <div class="name">
+        <p>
+          <label for="First Name">First Name *</label><br>
+          <input type="text" id="First" placeholder="First Name"><br>
+          <span id="Firsts"></span>
+        </p>
+        <p>
+          <label for="Last Name">Last Name *</label><br>
+          <input type="text" id="Last" placeholder="Last Name"><br>
+          <span id="Lasts"></span>
+        </p>
+      </div>
+      <div class="email">
+        <p>
+          <label for="Email Address">Email Address *</label><br>
+          <input type="text" id="Email" placeholder="enter a email address">
+          <span id="Emails"></span>
+        </p>
+      </div>
+      <p>Query Type *</p>
+      <div class="Query">
+        <label for="General">
+          <button id="General">
+            <input type="radio" value="General Enquiry" name="Generala" class="point"> General Enquiry
+          </button>
+          <span id="points"></span>
+        </label>
+        <label for="Support">
+          <button id="Support">  
+            <input type="radio" value="Support Request" name="Generala"class="point">Support Request
+          </button>
+        </label>
+        </div>
+        <label for="Message">Message *</label><br>
+        <textarea name="Message" id="Message" cols="60" rows="10" placeholder="Text Your Message"></textarea><br>
+        <span id="Messages"></span><br>
+      <input type="checkbox" name="team" id="team" class="team">
+      <label for="team">I consent to being contacted by the team *</label><br>
+      <span id="teams"></span><br>
+      <button class="Submit" type="submit">Submit</button>
+    </form>
+  </div>
+  <script src="script.js"></script>
+</body>
+
+</html>

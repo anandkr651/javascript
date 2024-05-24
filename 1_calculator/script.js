@@ -13,10 +13,10 @@ buttn.addEventListener('click',function(e){
    if(one === '' || one < 0 || isNaN(one)) {
           results.innerHTML = `please give the positive number ${first}`;
        } 
-       else if(two === '' || two < 0 || isNaN(two)){
+   if(two === '' || two < 0 || isNaN(two)){
           results.innerHTML = `please give the positive number ${second}`;
       }
-      else if(e.target.id==='addition'){
+   if(e.target.id==='addition'){
             const add = (one + two);
             results.innerHTML = `<span>${add}</span>`;
          }
