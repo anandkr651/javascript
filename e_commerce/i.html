@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>shoe_website</title>
+    <link rel="stylesheet" href="c.css">
+</head>
+
+<body>
+    <div class="container">
+        <nav class="flex nav-section">
+            <div class="nav-left flex">
+                <img src="icon-menu.svg" alt="" class="menu-btn hidden">
+                <img src="logo.svg" alt="company-logo" class="company-logo">
+                <div class="overlay"></div>
+                <ul class="nav-links flex">
+                    <img src="icon-delete.svg" alt="" class="close-btn hidden">
+                    <li class="nav-link"> Collections</li>
+                    <li class="nav-link"> Men</li>
+                    <li class="nav-link">Women</li>
+                    <li class="nav-link">About</li>
+                    <li class="nav-link">Contact</li>
+                </ul>
+            </div>
+            <div class="nav-right flex">
+                <div class="card-container">
+                    <button class="cart-btn">
+                        <span class="indicator"></span>
+                        <img src="icon-cart.svg" alt="" class="cart">
+                    </button>
+                    <div class="cart-wrp invisible">
+                        <p class="cart-heading">cart</p>
+                        <div class="divider"></div>
+                        <div class="cart-content empty">
+                            <p>your cart is empty</p>
+                        </div>
+                    </div>
+                </div>
+                <img src="image-avatar.png" alt="" class="avatar">
+            </div>
+        </nav>
+        <header class="header-section">
+            <div class="header-container flex">
+                <div class="header-left">
+                    <div class="big-img flex">
+                        <img src="image-product-1.jpg" alt="" class="main-thumbnail">
+                    </div>
+                    <div class="hidden mobile-thumb">
+                        <img src="image-product-1.jpg" alt="" class="thumb-mob">
+                        <button id="next"><img src="icon-next.svg" alt=""></button>
+                        <button id="previous"><img src="icon-previous.svg" alt=""></button>
+                    </div>
+                    <div class="flex short-img">
+                        <img src="image-product-1-thumbnail.jpg" alt="" class="selected">
+                        <img src="image-product-2-thumbnail.jpg" alt="">
+                        <img src="image-product-3-thumbnail.jpg" alt="">
+                        <img src="image-product-4-thumbnail.jpg" alt="">
+                    </div>
+                </div>
+                <div class="header-right">
+                    <div class="text">
+                        <p class="company-name">Sneaker Company</p>
+                        <h1>Fall Limited Edition Sneakers</h1>
+                        <p class="info">These low-profile sneakers are your perfect casual wear companion. Featuring a
+                            durable rubber outer sole, they’ll withstand everything the weather can offer.</p>
+                    </div>
+                    <div class="price">
+                        <div class="new-price flex">
+                            <h3>$125.00</h3>
+                            <button class="off">50%</button>
+                        </div>
+                        <del class="discount">$250.00</del>
+                    </div>
+                    <div class="buttons flex">
+                        <div class="amount-btn flex">
+                            <button class="minus">
+                                <img src="icon-minus.svg" alt="">
+                            </button>
+                            <button class="amount">0</button>
+                            <button class="plus">
+                                <img src="icon-plus.svg" alt="">
+                            </button>
+                        </div>
+                        <button class="add-btn flex">
+                            <img src="icon-cart.svg" alt="">
+                            add to cart
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </header>
+    </div>
+    <script src="j.js"></script>
+</body>
+
+</html>
