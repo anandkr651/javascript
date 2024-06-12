@@ -10,14 +10,45 @@
 
 <body>
     <script>
+/*javascript has 8 datatypes
+string
+number
+bigint
+boolean
+undefine
+null
+symbol
+object*/
+/* ----- the object datatypes
+the object data type can contain both build-in-object and user defined objects.
+build-in-object types can be :
+objects, arrays,dates,maps,sets,intarrays,floatarrays,promises,and etc*/
+/*    -------- difference between array and object ----------
+in javascript, array use numbered indexes person[0]
+in javascript, object use named index person["full_name"] or person.full_name*/
+
+        const points=new Array(10,20,30);
+        // console.log(points);
+        /*[10, 20, 30]*/
+        const point=[10,20,30];
+        // console.log(point);
+        /*[10, 20, 30]*/
+
+        /* there is a big different between them*/
+        const poins=new Array(10);
+        // console.log(poins);
+        /*[empty × 10]*/
+        const poin=[10];
+        // console.log(poin);
+        /*[10]*/
+
 
         let myarray = new Array(9, 1, 5, 2, 89, 91)
         myarray.push(6);
         myarray.pop();
         myarray.unshift(9);
         myarray.shift();
-        //console.log(myarray);
-
+        // console.log(myarray);
         // console.log(myarray.includes(9));
         // console.log(myarray.indexOf(3));
 
@@ -29,6 +60,9 @@
         the join() method return an array as a string.
         the join() method does not change the original array.
         any seperator can be specified. the default is comma(,).*/
+        /*[9, 1, 5, 2, 89, 91]
+        9,1,5,2,89,91
+        string*/
 
         //slice,splice
         // console.log("A",myarray);
@@ -46,39 +80,72 @@
         const dc_heros = ['superman', "flash", "batman"];
 
         // marvel_heros.push(dc_heros);
-
         // console.log(marvel_heros);
         // console.log(marvel_heros[3][1]);
+        /*0:"thor"
+        1:"ironman"
+        2:"spiderman"
+        3:['superman', 'flash', 'batman']
 
-        marvel_heros.concat(dc_heros)
+        flash*/
+
+        // marvel_heros.concat(dc_heros)
         // console.log(marvel_heros);
+        /*0:"thor"
+        1:"ironman"
+        2:"spiderman"*/
 
-        const allheros = marvel_heros.concat(dc_heros)
+        // const allheros = marvel_heros.concat(dc_heros)
         // console.log(allheros);
+        /*0:"thor"
+        1:"ironman"
+        2:"spiderman"
+        3:"superman"
+        4:"flash"
+        5:"batman"*/
 
-        const allnewheros = [...marvel_heros, ...dc_heros]
+        // const allnewheros = [...marvel_heros, ...dc_heros]
         // console.log(allnewheros);
+        /*0:"thor"
+        1:"ironman"
+        2:"spiderman"
+        3:"superman"
+        4:"flash"
+        5:"batman"*/
 
         const anotherarray = [1, 2, 3, [4, 5, 6], 7, [6, 7, [4, 5]]]
         const realanotherarray = anotherarray.flat(Infinity)
-
         // console.log(realanotherarray );
+        /*[1, 2, 3, 4, 5, 6, 7, 6, 7, 4, 5]*/
 
-        // console.log(Array.isArray("hitesh"));
+        const fruits=["banana","oranges","apples"];
+        // console.log(fruits);
+        // console.log(typeof fruits);
+        // console.log(Array.isArray(fruits));
+        // console.log(fruits instanceof Array); //the instance of operator returns true if an object is an instance of a specified object types
+        /*['banana', 'oranges', 'apples']
+        object
+        true
+        true*/
+
+        // console.log(Array.isArray("realanotherarray"));
         // console.log(Array.from("hitesh"));
         // console.log(Array.from({name:"hitesh"}));
-
+        /*false
+        ['h', 'i', 't', 'e', 's', 'h']
+        []*/
 
         let a = 100;
         let b = 200;
         let c = 300;
         // console.log(Array.of(a,b,c));
+        /*[100, 200, 300]*/
 
         const mysym = Symbol('key1')
 
         const jsuser = {
             accountid: 1435666666,
-            "full name": "anand kumar",   // "full_name"  tab access ho jaya ga  dot se 
+            "full name": "anand kumar",   // "full_name"  tab access ho jaya ga dot se 
             accountemail: "anand@gmail.com",
             [mysym]: "mykey1",
             accountpassword: "65970875",
@@ -90,12 +157,17 @@
         // console.log(jsuser["full name"]);  
         // console.log(jsuser[mysym]);
         // console.log(typeof jsuser.mysym);
+        /*1435666666
+        1435666666
+        anand kumar
+        mykey1
+        undefined*/
 
         jsuser.accountemail = "anand@21434.com";
-        // console.log(jsuser.accountemail);
+        // console.log(jsuser.accountemail);   //anand@21434.com
         // Object.freeze(jsuser)             //important
         jsuser.accountemail = "anand@21.com";
-        // console.log(jsuser.accountemail);
+        // console.log(jsuser.accountemail); //anand@21.com  //when we used to object.freeze(jsuser) then the accountemail value does not change.
 
         jsuser.greeting = function () {
             // console.log("hello js user");
@@ -111,6 +183,7 @@
 
         const tinderuser = new Object()
         // console.log(tinderuser);
+        /*{}*/
 
         const tinderusera = {}
         tinderusera.id = "123abc"
@@ -121,8 +194,16 @@
         // console.log(Object.keys(tinderusera));
         // console.log(Object.values(tinderusera));
         // console.log(Object.entries(tinderusera));
+        /*{id: '123abc', name: 'sanjay', isloggein: false}
+        ['id', 'name', 'isloggein']
+        ['123abc', 'sanjay', false]
+
+        ['id', '123abc']
+        ['name', 'sanjay']
+        ['isloggein', false]*/
 
         // console.log(tinderusera.hasOwnProperty('isloggein'));
+        /*true*/
 
         const regularuser = {
             email: "some@gmail.com",
@@ -133,19 +214,25 @@
                 }
             }
         }
-        //console.log(regularuser.fullname.userfullname.lastname);
+        // console.log(regularuser.fullname.userfullname.lastname);
+        /*choudhary*/
 
         const obj1 = { 1: "a", 2: "b" }
         const obj2 = { 3: "a", 4: "b" }
         const obj4 = { 5: "a", 6: "b" }
 
-        //const obj3 = {obj1,obj2}
+        // const obj3 = {obj1,obj2}
+        // console.log(obj3);
+        /*obj1:{1: 'a', 2: 'b'}
+        obj2:{3: 'a', 4: 'b'}*/
 
-        //const obj3= Object.assign({},obj1,obj2,obj4)
+        // const obj3= Object.assign({},obj1,obj2,obj4)
+        // console.log(obj3);
+        /*{1: 'a', 2: 'b', 3: 'a', 4: 'b', 5: 'a', 6: 'b'}*/
 
-        const obj3 = { ...obj1, ...obj2 }
-        //console.log(obj3);
-
+        // const obj3 = { ...obj1, ...obj2 }
+        // console.log(obj3);
+        /*{1: 'a', 2: 'b', 3: 'a', 4: 'b'}*/
 
         const users = [
             {
@@ -158,11 +245,11 @@
             },
             {
                 id: 1,
-                email: "a@gmail.com"
+                email: "av@gmail.com"
             },
         ]
-
-        users[2].email
+        // console.log(users[2].email);
+        /*av@gmail.com*/
 
         const course = {
             coursename: "js in hindi",
@@ -172,6 +259,56 @@
 
         const { courseinstructor } = course
         // console.log(courseinstructor);
+        /*hitesh*/
+
+        function person(first,last,age,eye){
+         this.firstname=first;
+         this.lastname=last;
+         this.personage=age;
+         this.eyecolor=eye;
+         this.nationality="english"
+         this.fullname=function(){
+            return this.firstname+" "+this.lastname
+         };
+        }
+        const myfather=new person("john","deo",50,"blue")
+        // console.log("my father age is",myfather.personage);
+        // console.log("my father nationality is",myfather.nationality);
+        /*my father age is 50
+        my father nationality is english*/
+
+        myfather.accountpassword=1234; //this properties is added to myfather not any other person.
+        // console.log("my father accountpassword is",myfather.accountpassword);
+        /*my father accountpassword is 1234*/
+
+        const mymother=new person("sally","rally",47,"blue",)
+        // console.log("my mother last name is",mymother.lastname);
+        /*my mother last name is rally*/
+
+        person.prototype.gmail="google@gmail.com" //this properties is added to the person
+        // console.log("my father gmail is",myfather.gmail);
+        // console.log("my mother gmail is",mymother.gmail);
+        /*my father gmail is google@gmail.com
+        my mother gmail is google@gmail.com*/
+
+        // console.log(myfather.fullname());
+        /*john deo*/
+
+         mymother.changename=function(name){
+            this.lastname=name;
+         }
+         mymother.changename("deo");
+        //  console.log(mymother.lastname);
+         /*deo*/
+         person.prototype.changename=function(name){
+            this.lastname=name;
+         }
+         mymother.changename("rsp");
+         myfather.changename("pqrs");
+        //  console.log(mymother.lastname);
+        //  console.log(myfather.lastname);
+         /*rsp
+         pqrs*/
     </script>
 </body>
 

@@ -19,11 +19,14 @@
         }
         // console.log(loginusermessage());
         // console.log(loginusermessage("hitesh"));
+        /*sam just logged in
+        hitesh just logged in*/
 
         function calculatecartprice(...num1) {        //yaha par ... rest operator hai
             return num1
         }
         // console.log(calculatecartprice(200,500,100,4586));
+        /*[200, 500, 100, 4586]*/
 
         const user = {
             username: "hitesh",
@@ -33,12 +36,13 @@
             console.log(`username is ${anyobject.username} and price is ${anyobject.price}`);
         }
         // handleabject(user)
-
+        /*username is hitesh and price is 199*/
 
         // handleabject({     
         //     username: "sam",
         //     price: 399
         // })    //function call ki ander hi object initilished kiya hai
+        /*username is sam and price is 399*/
 
         const mynewarray = [200, 400, 100, 600]
         function returnsecondvalue(getarray) {
@@ -46,6 +50,8 @@
         }
         // console.log(returnsecondvalue(mynewarray));
         // console.log(returnsecondvalue([200,500,100,600]));
+        /*400
+        500*/
 
         let a = 100;
         if (true) {
@@ -69,36 +75,40 @@
         }
         one()
 
-        //console.log(addone(4));  //code execute 5
+        // console.log(addone(4));  //code execute 5
         function addone(num) {
             return num + 1
         }
+        /*5*/
 
-        //console.log(addotw(5))                         //error
+        //console.log(addotw(5))             //error jab ham function ko variable mi store karete hai decelaration se phele call karete hai to error deteta hai. 
         const addotw = function (num) {
             return num + 2
         }
         // console.log(addotw(5)) 
+        /*7*/
 
         const users = {
             username: "hitesh",
             price: 999,
-
             welcomemassage: function () {
                 //    console.log(`${this.username},welcome to website`);
                 //     console.log(this);
             }
         }
-
         users.welcomemassage()
         users.username = "sam"
         users.welcomemassage()
+        /*hitesh,welcome to website
+        {username: 'hitesh', price: 999, welcomemassage: ƒ}
+        sam,welcome to website
+        {username: 'sam', price: 999, welcomemassage: ƒ}*/
 
         // console.log(this);
 
         function chai() {
             let username = "anand"
-            console.log(this.username);
+            // console.log(this.username);
         }
         chai()
 
@@ -128,7 +138,7 @@
 
         const add = (num1, num2) => ({ username: "abc" });
         // console.log(add(3,2));
-
+        /*{username: 'abc'}*/
 
         //immediately invoked function expression (iife)
 
@@ -150,7 +160,7 @@
             let power = "fly"
             // console.log(`user power: ${power}`);
         }
-        // console.log(`user power: ${power}`);
+        // console.log(`user power: ${power}`); //error
 
         const useremaila = []
         if (useremaila) {
@@ -195,7 +205,6 @@
         // 0==''                // true
 
 
-
         // nullish coalescing operator (??):null undefine
         let value1;
         value1 = 5 ?? 10
@@ -209,67 +218,147 @@
         for (const num of arr) {
             //  console.log(num);
         }
+        /*1
+        2
+        3
+        4
+        5*/
 
         const greeting = "hello world"
         for (const greet of greeting) {
             //   console.log(`each char is ${greet}`);
         }
-
+        /*each char is h
+        each char is e
+        2 each char is l
+        each char is o
+        each char is 
+        each char is w
+        each char is o
+        each char is r
+        each char is l
+        each char is d*/
         //maps
         const map = new Map()
         map.set('IN', "India")
         map.set('USA', "united state of america")
         map.set('FR', "france")
         map.set('IN', "India")
-
         // console.log(map);
+        /*{'IN' => 'India', 'USA' => 'united state of america', 'FR' => 'france'}*/
 
         for (const [key, value] of map) {
-            //console.log(key , ':-', value);
+            // console.log(key , ':-', value);
         }
+        /*IN :- India
+        USA :- united state of america
+        FR :- france*/
 
         const myobject = {
             game1: 'ngj',
             ame2: 'kklko'
         }
         for (const [key, value] in myobject) {
-            //console.log(key , ':-', value);
+            // console.log(key , ':-', value);
         }
+        /*g :- a
+        a :- m*/
 
         const mobject = {
             game1: 'ngj',
             game2: 'kklko',
             game3: 'jgujk'
         }
-
         for (const key in mobject) {
             // console.log(`${key} shortcut is for ${mobject[key]}`);
         }
+        /*game1 shortcut is for ngj
+        game2 shortcut is for kklko
+        game3 shortcut is for jgujk*/
+
+        const myarraya=Object.values(mobject);
+        // console.log(myarraya);
+        /*0:"ngj"
+        1:"kklko"
+        2:"jgujk"*/
+
+        const myarrayb=Object.entries(mobject);
+        // console.log(myarrayb);
+        /*0:(2) ['game1', 'ngj']
+        1:(2) ['game2', 'kklko']
+        2:(2) ['game3', 'jgujk']*/
+
+        const fruits={
+            bananas:300,
+            oranges:200,
+            apples:500
+        };
+        for(let [fruit,value] of Object.entries(fruits)){
+            //  console.log(fruit +" : "+value);
+        }
+        /*bananas : 300
+        oranges : 200
+        apples : 500*/
 
         const programming = ['js', 'rb', 'py', 'java', 'cpp']
         for (const key in programming) {
             // console.log(programming[key]);
         }
-
+        /*js
+        rb
+        py
+        java
+        cpp*/
 
         const coding = ['js', 'rb', 'py', 'java', 'abc']
         coding.forEach(function (item) {
             // console.log(item);
         })
+        /*js
+        rb
+        py
+        java
+        abc*/
 
         coding.forEach((item) => {
             // console.log(item);
         })
+        /*js
+        rb
+        py
+        java
+        abc*/
 
         function printme(item) {
             // console.log(item);
         }
         coding.forEach(printme)
+        /*js
+        rb
+        py
+        java
+        abc*/
 
+        const value = coding.forEach((item) => {
+            // console.log(item);
+            return item
+        })
+        // console.log(value);
+        /*js
+        rb
+        py
+        java
+        abc
+        undefine*/
 
         coding.forEach((item, index, arr) => {
             // console.log(item,index,arr);
         })
+        /*js 0 (5) ['js', 'rb', 'py', 'java', 'abc']
+        rb 1 (5) ['js', 'rb', 'py', 'java', 'abc']
+        py 2 (5) ['js', 'rb', 'py', 'java', 'abc']
+        java 3 (5) ['js', 'rb', 'py', 'java', 'abc']
+        abc 4 (5) ['js', 'rb', 'py', 'java', 'abc']*/
 
         const mycoding = [
             {
@@ -288,22 +377,20 @@
         mycoding.forEach((item) => {
             // console.log(item.languagename);
         })
-
-        const value = coding.forEach((item) => {
-            // console.log(item);
-            return item
-        })
-        // console.log(value);
+        /*javascript
+        python
+        java*/
 
         const mynums = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
         const newnum = mynums.filter((num) => num > 4)
-        //console.log(newnum);
-
+        // console.log(newnum);
+        /*[5, 6, 7, 8, 9, 10]*/
 
         const newnums = mynums.filter((num) => {
             return num > 7
         })
-        //console.log(newnums);
+        // console.log(newnums);
+        /*[8, 9, 10]*/
 
         const nenums = []
         mynums.forEach((num) => {
@@ -311,7 +398,8 @@
                 nenums.push(num)
             }
         })
-        //console.log(nenums);
+        // console.log(nenums);
+        /*[7, 8, 9, 10]*/
 
         const books = [
             {
@@ -338,26 +426,38 @@
         ];
         const userbooks = books.filter((bk) => bk.genre === "history")
         // console.log(userbooks);
+        /*0:{languagename: 'javascript', languagefilename: 'js', genre: 'history', publish: '2006', edition: '1999'}
+        1:{languagename: 'python', languagefilename: 'py', genre: 'history', publish: '2001', edition: '1956'}*/
 
         let usebooks = books.filter((bk) => {
             return bk.publish >= 2000 && bk.genre === "history"
         })
-        //console.log(usebooks);
-
+        // console.log(usebooks);
+        /*0:{languagename: 'javascript', languagefilename: 'js', genre: 'history', publish: '2006', edition: '1999'}
+        1:{languagename: 'python', languagefilename: 'py', genre: 'history', publish: '2001', edition: '1956'}*/
 
         const mynumers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
         const newnumes = mynumers.map((num) => num > 5)
         // console.log(newnumes);
+        /*[false, false, false, false, false, true, true, true, true, true]*/
 
         const mnumers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
-        const nwnumes = mynumers.map((num) => num + 10)
+        const nwnumes = mnumers.map((num) => num + 10)  //it does not change in the original array
         // console.log(nwnumes);
+        /*[11, 12, 13, 14, 15, 16, 17, 18, 19, 20]*/
+        const abc=mnumers.every((num)=>num>10) //the every() method checks if all arrays values pass a test
+        // console.log(abc);
+        /*false*/
+        const ab=mnumers.some((num)=>num>7) //the some() method checks if some arrays values pass a test
+        // console.log(ab);
+        /*true*/
 
         const newnms = mynumers
             .map((num) => num * 10)
             .map((num) => num + 1)
             .filter((num) => num >= 41)
-        //console.log(newnms);
+        // console.log(newnms);
+        /*[41, 51, 61, 71, 81, 91, 101]*/
 
         const myums = [1, 2, 3]
         const mytotal = myums.reduce(function (acc, currval) {
@@ -365,7 +465,10 @@
             return acc + currval
         }, 0)
         // console.log(mytotal);
-
+        /*acc:0 and currval: 1
+        acc:1 and currval: 2
+        acc:3 and currval: 3
+        6*/
 
         const mytota = myums.reduce((acc, curr) => acc + curr, 0)
         // console.log(mytota);
@@ -389,7 +492,8 @@
             },
         ]
         const pricetopay = shoppingcart.reduce((acc, item) => acc + item.price, 0)
-        //   console.log(pricetopay);      
+        //   console.log(pricetopay);
+          /*1080*/    
     </script>
 </body>
 

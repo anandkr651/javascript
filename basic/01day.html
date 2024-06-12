@@ -14,45 +14,62 @@
         let da = 13;
         // console.log("c+da is",c+da);
         // console.log("the type of da is",typeof(da));
-        /* output c+da is 25
+        /*c+da is 25
          the type of da is number*/
 
         aa = 23;
         ab = false
-        // console.log("the type of a is", typeof (aa));
-        // a = Boolean(ab)
         // console.log(ab);
+        ac = Boolean(ab)
+        // console.log(ac);
+        // console.log("the type of a is", typeof (ac));
+        /*false
+        false
+        the type of a is boolean*/
 
         ac = 'anand'
-        //  console.log("the type of a is",typeof(ac));
+        // console.log("the type of a is",typeof(ac));
+        /* the type of a is string */
 
         const firstnumber = 3;
         const secondnumber = 2;
-
         const result = firstnumber + secondnumber;
         // console.log(result);
         const resultd = firstnumber ** secondnumber;
         // console.log(resultd);
         const resultc = firstnumber * secondnumber;
         // console.log(resultc);
+        /*5
+        9
+        6*/
 
         let a = 12;
         a++;
         // console.log(a);
+        /*13*/
 
         let thirdnumber = 12;
         thirdnumber += 4;
-        //console.log(thirdnumber);
+        // console.log(thirdnumber);
+        /*16*/
 
         const firstnumbera = '3';
         const secondnumbera = 3;
         const resulta = firstnumbera == secondnumbera;
+        const resultx = firstnumbera === secondnumbera;
         // console.log(resulta);
+        // console.log(resultx);
+        /*true
+        false*/
 
         const firstnumberb = 'A';
         const secondnumberb = 65;
         const resultb = firstnumberb === secondnumberb;
+        const resultz = firstnumberb == secondnumberb;
         // console.log(resultb);
+        // console.log(resultz);
+        /*false
+        false*/
 
         const age = 24;
         if (age >= 18) {
@@ -119,24 +136,48 @@
         const words = ["apple", 'banana', 'cherry', 12, true, {
             name: 'anand'
         },
-            function hello() { console.log('hello world'); }
+            function hello() { 
+                console.log('hello world'); 
+            }
         ];
-
         const newwords = words;
         newwords[1] = "kiwi";
 
         //  console.log(words);
         //  console.log(newwords);
         //  console.log(words.length);
+         /*0:"apple"
+         1:"kiwi"
+         2:"cherry"
+         3:12
+         4:true
+         5:{name: 'anand'}
+         6:ƒ hello()
+         length:7
 
+         0:"apple"
+         1:"kiwi"
+         2:"cherry"
+         3:12
+         4:true
+         5:{name: 'anand'}
+         6:ƒ hello()
+         length:7
+         
+         7*/
 
         const num = [4, 1, 5, 8, 0, 6, 8];
-        //  console.log(num.indexOf(8));
-        //  console.log(num.indexOf(3));
+        // console.log(typeof(num));
+        // console.log(num.indexOf(8));
+        // console.log(num.indexOf(3));
         // console.log(num.includes(8));
+        /*object
+        3
+        -1
+        true*/
 
         num.push("anuj");   //to add in the last
-        //console.log(num);  
+        // console.log(num);
 
         num.unshift("anand");   //to add in the first
         //console.log(num);
@@ -150,12 +191,19 @@
         num.sort();    //it can be sort the data of an array
         // console.log(num);
 
-        // const subarray = num.slice(2, 5)   //2nd,3rd,4th
+        const numx = [4, 1, 5, 8, 0, 6, 8];
+        const subarray = numx.slice(2, 5)   //2nd,3rd,4th
         // console.log(subarray);
+        // console.log(numx);
+        /*[5, 8, 0]
+        [4, 1, 5, 8, 0, 6, 8]*/
 
-        const suarray = num.splice(2, 4) //starting from 2 index and count 4 
+        const nums = [4, 1, 5, 8, 0, 6, 8];
+        const suarray = nums.splice(2, 4) //delete the data starting from 2 index and count 4 
         // console.log(suarray);
-        // console.log(num);
+        // console.log(nums);
+        /*[5, 8, 0, 6]
+        [4, 1, 8]*/
 
         const x = 12;
         const b = 4;
@@ -170,24 +218,22 @@
         // console.log("result",cplusd);
         sumoftwonumber(y, d);
 
-        const e = 72;
-        const f = 5;
-        const eplusf = e + f;
-        // console.log("result",eplusf);
-        sumoftwonumber(e, f);
-
         function sumoftwonumber(a, b) {
             const sum = a + b;
             //console.log("the result are",sum);
             return sum;
         }
 
-        // console.log(square(7));  //error
+        // console.log(square(7));  //error  Cannot access 'square' before initialization
         const square = function (num) {
             return num * num;
         };
         // console.log(square);
         // console.log(square(7));
+        /*f (num) {
+            return num * num;
+        }
+        49*/
 
         function addsquare(a, b) {
             const sa = square(a);
@@ -248,14 +294,25 @@
         }
         const bresult = ba.find(firstneg);
         //  console.log(bresult);
+         /*-2*/
 
         const cresulta = ba.findIndex(firstneg);
         //  console.log(cresulta);
+         /*3*/
 
         ba.forEach((num, i) => {
             // console.log("arraynum",num,i);
         });
-
+        /*arraynum 4 0
+        arraynum 1 1
+        arraynum 6 2
+        arraynum -2 3
+        arraynum -5 4
+        arraynum 3 5
+        arraynum 2 6
+        arraynum -8 7
+        arraynum 6 8
+        arraynum 7 9*/
 
         // console.log("anand");
         // setTimeout(function() {
@@ -263,6 +320,10 @@
         // },1000);
         // console.log("kumar");
         // console.log("bhagat");
+        /*anand
+        kumar
+        bhagat
+        this is a boy*/
 
         /*function getcheese(callback) {
            setTimeout(() => {

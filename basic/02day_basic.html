@@ -10,6 +10,45 @@
 
 <body>
    <script>
+      /*why study javascript ?
+      javascript is one of the 3 language all web developer
+      1. HTML to define the content of web pages
+      2. CSS to specify the layout of web page
+      3. JAVASCRIPT to program the behavior of web pages
+      
+      --  javascript was invented by brendan eich in 1995 and became an ECMA standard in 1997
+      --  ECMA-262 is the offical name of standard. ECMAScript is the offical name of the language
+      */
+
+      /*-- let and const does not bind to this
+      -- let and const are not hoisted
+      var is hoisted and bind to this
+      ------ let hoisting ------
+      variable defined with var are hoisted to the top and can be initialized at any time.
+      meaning : you can use the variable before it is declared
+      carName = "volve"
+      var carName 
+      jab ham console.log(carName) karete hai tab volve aata hai console mi
+      and let and const give an error when we used this type
+      ------ const ------
+      correct -> const pi=3.141592;
+      incorrect -> const pi;
+      pi=3.141592;
+      when to use javascript const ?
+      always decelare a variable with const when you know that the value should not be changed.
+      use const when you declare :--
+      * a new Array
+      * a new Object
+      * a new Function
+      * a new RegExp
+      because of this you can NOT
+      - reassign a constant value
+      - reassign a constant array
+      - reassign a constant object
+      but you can
+      - change the elements of constant array
+      - change the properties of constant object
+      */
       const accountid = 1435666666;
       let accountemail = "anand@gmail.com"
       var accountpassword = "65970875"  //please not use to var because of issue in block scope and functional scope
@@ -24,26 +63,23 @@
       accountcity = "ranchi"
 
       // console.table([accountid,accountemail,accountpassword,accountcity,accountstate]);
-      /*
-      (index) Value
+      /*(index) Value
       0	1435666666
       1	'anand@google.com'
       2	'123456'
       3	'ranchi'
       4	undefined
-      Array(5)
-      */
+      Array(5)*/
 
-      /*
-         number => 2 to power 53
+      /* number => 2 to power 53
          bigint
          string => "" / ''
          boolean =>true/ false
          null =>standalone value
          undefined =>
          symbol => unique
-         object
-      */
+         object*/
+
       // console.log(typeof null);    //object
       // console.log(typeof undefined);  //undefined
 
@@ -92,18 +128,23 @@
       // console.log(1 + "2");              //12
       // console.log("1" + 2 +2);           //122
       // console.log(1 + 2 +"2");           //32
+      let x = 30;
+      let y = 20;
+      let z = "this is very important " + x + y;
+      console.log(z);
+      /*this is very important 3020*/
 
+      // console.log("2" > 1);    //true //string is converted into number
+      // console.log("02" > 1);   //true //string is converted into number
+      // console.log("20"<"5");   //true
 
-      // console.log("2" > 1);     //string is converted into number
-      // console.log("02" > 1);    //string is converted into number
-
-      // console.log(null>0);             //false
-      // console.log(null ==0);             //false
-      // console.log(null>=0);             //true
+      // console.log(null > 0);             //false
+      // console.log(null == 0);           //false
+      // console.log(null >= 0);            //true
 
       // console.log(undefined > 0);        //false
-      // console.log(undefined == 0);         //false
-      // console.log(undefined >= 0);         //false
+      // console.log(undefined == 0);       //false
+      // console.log(undefined >= 0);       //false
 
       /*primitive;   call by value
       7 types: string, number, boolean, null, undefine, symbol,bigint;
@@ -121,17 +162,17 @@
       const bigint = 45567788625907543527n
       //console.log(bigint);
 
- /*array */       
+      /*array */
       const heros = ["shaktiman", "nagaarjun", "doga"];
 
-/*object */       
-        let myobj = {
+      /*object */
+      let myobj = {
          name: "anand",
          age: 22,
       }
 
- /*function */       
-       const myfunction = function () {
+      /*function */
+      const myfunction = function () {
          //console.log("hello world");
       }
 
@@ -139,56 +180,95 @@
       // heap : non primitive
 
       let myyoutubename = "anandbhagat.com"
-
       let anothername = myyoutubename
       anothername = "kumaranand"
-
       // console.log(myyoutubename);     //anandbhagat.com
       //  console.log(anothername);      //kumaranand
 
       let userone = {
          email: 'user@google.com'
       }
-
       let usertwo = userone;                    //address of userone
       usertwo.email = 'kumaranand@gmail.com';
-
       // console.log(userone.email);        //kumaranand@gmail.com
       // console.log(usertwo.email);        //kumaranand@gmail.com
 
 
       const name = "hitesh";
       const repocount = 50;
-
       //console.log(`hello my name is ${name} and my repo count is ${repocount}`);
 
       const gamename = new String('hitesh-hc-jabncb-Mnkjh');     //string is used in object
       // console.log(gamename);
       // console.log(typeof gamename);          //object
 
-      // console.log(gamename[3]);
       // console.log(gamename.__proto__);
+
+      // console.log(gamename[3]);
       // console.log(gamename.length);
       // console.log(gamename.toUpperCase());
       // console.log(gamename.charAt(2));
+      // console.log(gamename.at(2));
+      // console.log(gamename.charCodeAt(0));   //the charCodeAt() method returns the unicode of the character at a given position in a string.
       // console.log(gamename.indexOf('h'));
+      // console.log(gamename.lastIndexOf('h'));
       // console.log(gamename.split('-'));
+      // console.log(gamename.substr(7));
+      // console.log(gamename.search("hc"));
+      // console.log(gamename.match("hc"));
+      // console.log(gamename.startsWith("hitesh"));
+      // console.log(gamename.endsWith("hitesh"));
+
+      /*e
+      22
+      HITESH-HC-JABNCB-MNKJH
+      t
+      t
+      104
+      0
+      21
+      ['hitesh', 'hc', 'jabncb', 'Mnkjh']
+      hc-jabncb-Mnkjh
+      7
+      ['hc', index: 7, input: 'hitesh-hc-jabncb-Mnkjh', groups: undefined]
+      true
+      false*/
 
       const newstring = gamename.substring(0, 4);        //4th not acess 
-      //console.log(newstring);
+      // console.log(newstring);
+      /*hite*/
 
-      const anotherstring = gamename.slice(-1, 4)
+      const anotherstring = gamename.slice(1, 4)
       // console.log(anotherstring);
+      /*ite*/
 
       const newstringone = "   anand  ";
       // console.log(newstringone);
       // console.log(newstringone.trim());
+      /*   anand  
+      anand*/
 
-      const url = "https://hitesh.com/hitesh%20choudhary"
-      console.log(url.replace('%20', '-'));
-      console.log(url.includes('pites'));
+      const url = "https://hitesh.com/hitesh%20choudhary%20"
+      // console.log(url.replace('%20', '-'));
+      // console.log(url.replaceAll('%20', '-'));
+      // console.log(url.includes('pites'));
+      /*https://hitesh.com/hitesh-choudhary%20
+      https://hitesh.com/hitesh-choudhary%-
+      false*/
 
-      //vidoes number 11  end upper   ^|
+      let text = "5";
+      let padded = text.padStart(4, "X");
+      let padde = text.padEnd(4, "X");
+      // console.log(padded);
+      // console.log(padde);
+      /*XXX5
+      5XXX*/
+
+      let texta = "hello world "
+      // console.log(texta.repeat(2));
+      /*hello world hello world*/
+
+      //vidoes number 11  end upper ^|
 
       const score = 400;
       // console.log(score);
@@ -196,39 +276,54 @@
 
       const balance = new Number(100);
       // console.log(balance);
-      // console.log(typeof balance);    //object
-
-
+      // console.log(typeof balance);
       // console.log(balance.toString().length);
       // console.log(balance.toFixed(2));
+      /*Number {100}
+      object
+      3
+      100.00*/
 
       const othernumber = 23.69187890;
-      //console.log(othernumber.toPrecision(3));
-
+      // console.log(othernumber.toPrecision(3));
+      // 23.7
 
       const hundreds = 1000000000;
       // console.log(hundreds.toLocaleString('en-IN'));
       // console.log(typeof hundreds);
+      /*1,00,00,00,000
+      number*/
 
       // console.log(Math);
+
       // console.log(Math.abs(-4));
       // console.log(Math.abs(4));
+      /*4
+      4*/
 
       // console.log(Math.round(4.689));
       // console.log(Math.ceil(4.2));
       // console.log(Math.floor(4.9));
+      /*5
+      5
+      4*/
 
       // console.log(Math.min(4,7,3,9));
       // console.log(Math.max(4,7,3,9));
+      /*3
+      9*/
 
       // console.log(Math.random());
       // console.log((Math.random()*10)+1);
       // console.log(Math.floor(Math.random()*10)+1);
-
+      /*0.24711839376329459
+      4.626360289981799
+      10*/
 
       const min = 10;
       const max = 20;
       // console.log(Math.floor(Math.random()*(max-min +1))+min)
+      /*11*/
 
       let mydate = new Date()
       // console.log(mydate);
@@ -236,37 +331,60 @@
       // console.log(mydate.toDateString());
       // console.log(mydate.toLocaleString());
       // console.log(typeof mydate);
+      /*Mon Jun 10 2024 20:42:28 GMT+0530 (India Standard Time)
+      Mon Jun 10 2024 20:42:28 GMT+0530 (India Standard Time)
+      Mon Jun 10 2024
+      10/6/2024, 8:42:28 pm
+      object*/
 
       let mycreateddate = new Date(2023, 6, 16);
       // console.log(mycreateddate);
       // console.log(new Date);
       // console.log(mycreateddate.getTime());
+      /*Sun Jul 16 2023 00:00:00 GMT+0530 (India Standard Time)
+      Mon Jun 10 2024 20:44:00 GMT+0530 (India Standard Time)
+      1689445800000*/
 
       let mytimestamp = Date.now()
-         // console.log(mytimestamp);
-         // console.log(mydate.getTime());
-         // console.log(mydate.getDay());
-         // console.log(mydate.getDate());
-         // console.log(mydate.getHours());
-         // console.log(mydate.getMinutes());
-         // console.log(mydate.getSeconds());
-         // console.log(Math.floor(Date.now()/1000));
+      // console.log(mytimestamp);
+      // console.log(mydate.getTime());
+      // console.log(mydate.getDay());
+      // console.log(mydate.getDate());
+      // console.log(mydate.getHours());
+      // console.log(mydate.getMinutes());
+      // console.log(mydate.getSeconds());
+      // console.log(Math.floor(Date.now()/1000));
+      /*1718032487395
+   1718032487395
+   1
+   10
+   20
+   44
+   47
+   1718032487*/
 
       let newdate = new Date()
       // console.log(newdate);
       // console.log(newdate.getMonth()+1);
       // console.log(newdate.getFullYear());
-
+      /*Mon Jun 10 2024 20:45:45 GMT+0530 (India Standard Time)
+      6
+      2024*/
 
       let mypen = newdate.toLocaleString('default', {
          // weekday:'long'
          // year:'numeric'
          // timeStyle:'full'
          // timeStyle:'long'
-         hour: 'numeric'
+         // hour: 'numeric'
       });
-
-      //console.log(mypen);
+      // console.log(mypen);
+      /*monday
+      2024
+      8:47:59 pm India Standard Time
+      8:48:18 pm IST
+      8 pm
+      10/6/2024, 8:48:38 pm*/
    </script>
 </body>
 
