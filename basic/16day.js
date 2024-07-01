@@ -16,7 +16,7 @@ console.log(random);
 */
 
 const box1=document.getElementById('box-1');
- box1.innerHTML="<h1>hello</h>"
+box1.innerHTML="<h1>hello</h>"
 box1.style.backgroundColor='red'
 
 
