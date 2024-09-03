@@ -10,62 +10,67 @@
 
 <body>
    <script>
-      /*why study javascript ?
-      javascript is one of the 3 language all web developer
-      1. HTML to define the content of web pages
-      2. CSS to specify the layout of web page
-      3. JAVASCRIPT to program the behavior of web pages
-      
-      --  javascript was invented by brendan eich in 1995 and became an ECMA standard in 1997
-      --  ECMA-262 is the offical name of standard. ECMAScript is the offical name of the language
-      */
+      let c = 12;
+      let da = 13;
+      // console.log("c+da is",c+da);
+      // console.log("the type of da is",typeof(da));
+      /*c+da is 25
+       the type of da is number*/
 
-      /*-- let and const does not bind to this
-      -- let and const are not hoisted
-      var is hoisted and bind to this
-      ------ let hoisting ------
-      variable defined with var are hoisted to the top and can be initialized at any time.
-      meaning : you can use the variable before it is declared
-      carName = "volve"
-      var carName 
-      jab ham console.log(carName) karete hai tab volve aata hai console mi
-      and let and const give an error when we used this type
-      ------ const ------
-      correct -> const pi=3.141592;
-      incorrect -> const pi;
-      pi=3.141592;
-      when to use javascript const ?
-      always decelare a variable with const when you know that the value should not be changed.
-      use const when you declare :--
-      * a new Array
-      * a new Object
-      * a new Function
-      * a new RegExp
-      because of this you can NOT
-      - reassign a constant value
-      - reassign a constant array
-      - reassign a constant object
-      but you can
-      - change the elements of constant array
-      - change the properties of constant object
-      */
+      aa = 23;
+      ab = 0
+      // console.log(ab);
+      ac = Boolean(ab)
+      // console.log(ac);
+      // console.log("the type of ac is", typeof (ac));
+      /*0
+      false
+      the type of ac is boolean*/
 
-      /* LET the value of x is 5
-      Operator	Description	Comparing
-      ==	equal to	x == 8	false	
-                  x == 5	true	
-                  x == "5"	true	
-      ===	equal value and equal type	x === 5	true	
-                                       x === "5"	false	
-      !=	not equal	x != 8	true	
-      !==	not equal value or not equal type	x !== 5	false	
-                                                x !== "5"	true	
-                                                x !== 8	true	
-      >	greater than	x > 8	false	
-      <	less than	x < 8	true	
-      >=	greater than or equal to	x >= 8	false	
-      <=	less than or equal to	x <= 8	true	
-      */
+      ac = 'anand'
+      // console.log("the type of ac is",typeof(ac));
+      /* the type of ac is string */
+
+      const firstnumber = 3;
+      const secondnumber = 2;
+      const result = firstnumber + secondnumber;
+      // console.log(result);
+      const resultd = firstnumber ** secondnumber;
+      // console.log(resultd);
+      const resultc = firstnumber * secondnumber;
+      // console.log(resultc);
+      /*5
+      9
+      6*/
+
+      let a = 12;
+      a++;
+      // console.log(a);
+      /*13*/
+
+      let thirdnumber = 12;
+      thirdnumber += 4;
+      // console.log(thirdnumber);
+      /*16*/
+
+      const firstnumbera = '3';
+      const secondnumbera = 3;
+      const resulta = firstnumbera == secondnumbera;
+      const resultx = firstnumbera === secondnumbera;
+      // console.log(resulta);
+      // console.log(resultx);
+      /*true
+      false*/
+
+      const firstnumberb = 'A';
+      const secondnumberb = 65;
+      const resultb = firstnumberb === secondnumberb;
+      const resultz = firstnumberb == secondnumberb;
+      // console.log(resultb);
+      // console.log(resultz);
+      /*false
+      false*/
+
       const accountid = 1435666666;
       let accountemail = "anand@gmail.com"
       var accountpassword = "65970875"  //please not use to var because of issue in block scope and functional scope
@@ -87,18 +92,6 @@
       3	'ranchi'
       4	undefined
       Array(5)*/
-
-      /* number => 2 to power 53
-         bigint
-         string => "" / ''
-         boolean =>true/ false
-         null =>standalone value
-         undefined =>
-         symbol => unique
-         object*/
-
-      // console.log(typeof null);    //object
-      // console.log(typeof undefined);  //undefined
 
       let scores = "33"
       // console.log(typeof scores);  //string
@@ -145,6 +138,7 @@
       // console.log(1 + "2");              //12
       // console.log("1" + 2 +2);           //122
       // console.log(1 + 2 +"2");           //32
+
       let x = 30;
       let y = 20;
       let z = "this is very important " + x + y;
@@ -155,8 +149,20 @@
       // console.log("02" > 1);   //true //string is converted into number
       // console.log("20"<"5");   //true
 
+      /* number => 2 to power 53
+         bigint
+         string => "" / ''
+         boolean =>true/ false
+         null =>standalone value
+         undefined =>
+         symbol => unique
+         object*/
+
+      // console.log(typeof null);       //object
+      // console.log(typeof undefined);  //undefined
+
       // console.log(null > 0);             //false
-      // console.log(null == 0);           //false
+      // console.log(null == 0);            //false
       // console.log(null >= 0);            //true
 
       // console.log(undefined > 0);        //false
@@ -169,87 +175,38 @@
       reference (non primitive);
       array, object, function;   */
 
-
       const id = Symbol('123');
       const anotherid = Symbol('123');
       // console.log(id);
       // console.log(anotherid);
       // console.log(id===anotherid);   //symbol is used for uniqueness
 
+      let xa = "John";              // x is a string
+      let ya = new String("John");  // y is an object
+      // console.log(xa==ya);  //true //Strings and objects cannot be safely compared.
+      // console.log(xa===ya); //false
+
+      let xab = new String("John");
+      let yab = new String("John");
+      // console.log(xab==yab); //false
+      // console.log(xab===yab); //false
+
+      // NOTE --> Comparing two JavaScript objects always returns false.
+
+      let tet = "Please visit Microsoft!"; //does not change in original
+      let newText = tet.replace("Microsoft", "W3Schools");
+      // console.log(newText); //Please visit W3Schools!
+
+
       const bigint = 45567788625907543527n
       //console.log(bigint);
-
-      /*array */
-      const heros = ["shaktiman", "nagaarjun", "doga"];
-
-      /*object */
-      let myobj = {
-         name: "anand",
-         age: 22,
-      }
-
-      /*function */
-      const myfunction = function () {
-         //console.log("hello world");
-      }
 
       // stack : primitive
       // heap : non primitive
 
-      let myyoutubename = "anandbhagat.com"
-      let anothername = myyoutubename
-      anothername = "kumaranand"
-      // console.log(myyoutubename);     //anandbhagat.com
-      //  console.log(anothername);      //kumaranand
-
-      let userone = {
-         email: 'user@google.com'
-      }
-      let usertwo = userone;                    //address of userone
-      usertwo.email = 'kumaranand@gmail.com';
-      // console.log(userone.email);        //kumaranand@gmail.com
-      // console.log(usertwo.email);        //kumaranand@gmail.com
-
-
       const name = "hitesh";
       const repocount = 50;
       //console.log(`hello my name is ${name} and my repo count is ${repocount}`);
-
-      const gamename = new String('hitesh-hc-jabncb-Mnkjh');     //string is used in object
-      // console.log(gamename);
-      // console.log(typeof gamename);          //object
-
-      // console.log(gamename.__proto__);
-
-      // console.log(gamename[3]);
-      // console.log(gamename.length);
-      // console.log(gamename.toUpperCase());
-      // console.log(gamename.charAt(2));
-      // console.log(gamename.at(2));
-      // console.log(gamename.charCodeAt(0));   //the charCodeAt() method returns the unicode of the character at a given position in a string.
-      // console.log(gamename.indexOf('h'));
-      // console.log(gamename.lastIndexOf('h'));
-      // console.log(gamename.split('-'));
-      // console.log(gamename.substr(7));
-      // console.log(gamename.search("hc"));
-      // console.log(gamename.match("hc"));
-      // console.log(gamename.startsWith("hitesh"));
-      // console.log(gamename.endsWith("hitesh"));
-
-      /*e
-      22
-      HITESH-HC-JABNCB-MNKJH
-      t
-      t
-      104
-      0
-      21
-      ['hitesh', 'hc', 'jabncb', 'Mnkjh']
-      hc-jabncb-Mnkjh
-      7
-      ['hc', index: 7, input: 'hitesh-hc-jabncb-Mnkjh', groups: undefined]
-      true
-      false*/
 
       /* split can be used in backend folder in user controller*/
       const avatar = "http://res.cloudinary.com/anand-kumar/image/upload/v1722621432/owiljart2xvj423pej4q.jpg"
@@ -269,25 +226,6 @@
       // console.log(fourth);
       //owiljart2xvj423pej4q
 
-
-
-
-
-
-      const newstring = gamename.substring(0, 4);        //4th not acess 
-      // console.log(newstring);
-      /*hite*/
-
-      const anotherstring = gamename.slice(1, 4)
-      // console.log(anotherstring);
-      /*ite*/
-
-      const newstringone = "   anand  ";
-      // console.log(newstringone);
-      // console.log(newstringone.trim());
-      /*   anand  
-      anand*/
-
       const url = "https://hitesh.com/hitesh%20choudhary%20"
       // console.log(url.replace('%20', '-'));
       // console.log(url.replaceAll('%20', '-'));
@@ -295,6 +233,12 @@
       /*https://hitesh.com/hitesh-choudhary%20
       https://hitesh.com/hitesh-choudhary%-
       false*/
+
+      const newstringone = "   anand  ";
+      // console.log(newstringone);
+      // console.log(newstringone.trim());
+      /*   anand  
+      anand*/
 
       let text = "5";
       let padded = text.padStart(4, "X");
@@ -307,8 +251,6 @@
       let texta = "hello world "
       // console.log(texta.repeat(2));
       /*hello world hello world*/
-
-      //vidoes number 11  end upper ^|
 
       const score = 400;
       // console.log(score);
@@ -364,6 +306,128 @@
       const max = 20;
       // console.log(Math.floor(Math.random()*(max-min +1))+min)
       /*11*/
+
+      const age = 24;
+      if (age >= 18) {
+         //console.log('you can vote');
+      } else {
+         console.log('you can not vote');
+      }
+
+      let az = 100;
+      if (true) {
+         let az = 10;
+         const b = 20;
+         // console.log("INNER:",az); 
+      }
+      // console.log(az);
+      // console.log(b);
+
+      const scor = 200
+      if (scor > 100) {
+         let power = "fly"
+         // console.log(`user power: ${power}`);
+      }
+      // console.log(`user power: ${power}`); //error
+
+      // falsy value
+      //false, 0, -0, bigint 0n,"", null, undefined,Nan
+
+      //truthy values
+      // "0", 'false', " ", [], {}, function(){}
+
+      // false==0             // true
+      // false==""            // true
+      // 0==''                // true
+
+      const useremaila = []
+      if (useremaila) {
+         // console.log("got user email");
+      } else {
+         console.log("donot have user email");
+      }
+
+      const useremail = ""
+      if (useremail) {
+         console.log("got user email");
+      } else {
+         // console.log("donot have user email");
+      }
+
+      const useremailb = "h@email.com"
+      if (useremailb) {
+         // console.log("got user email");
+      } else {
+         console.log("donot have user email");
+      }
+
+      const grade = 'r';
+      switch (grade) {
+         case 'A':
+            console.log('a is very good');
+         case 'B':
+            console.log('b is very smart');
+            break;
+         case 'C':
+            console.log('c is very learning');
+            break;
+         case 'D':
+            console.log('d is very not good');
+            break;
+         default:
+         // console.log('invalid detail');
+      }
+
+      for (let b = 0; b < 5; b++) {
+         // console.log("anand kumar",b); 
+      }
+
+      let stepa = 9;
+      do {
+         // console.log('step',stepa);
+         stepa += 1;
+      } while (stepa < 5);
+
+      let step = 0;
+      while (step < 5) {
+         // console.log('step',step);
+         step = step + 2;
+      }
+
+      let stepb = 0;
+      while (stepb < 5) {
+         //console.log('stap',stepb);
+         stepb = stepb + 1;
+         if (stepb == 2) {
+            break;
+         }
+      }
+
+      let stepc = 0;
+      while (stepc < 5) {
+         stepc = stepc + 1;
+         if (stepc == 2) {
+            continue;
+         }
+         // console.log('step',stepc);
+      }
+
+      if (useremail.length === 0) {
+         // console.log("array is empty");
+      }
+
+      const emptyObj = {}
+      if (Object.keys(emptyObj).length === 0) {
+         //  console.log("object is empty");
+      }
+
+      // nullish coalescing operator (??):null undefine
+      let value1;
+      value1 = 5 ?? 10
+      value1 = null ?? 10
+      value1 = undefined ?? 15
+      value1 = null ?? 10 ?? 15
+      // console.log(value1);
 
       let mydate = new Date()
       // console.log(mydate);
@@ -425,6 +489,102 @@
       8:48:18 pm IST
       8 pm
       10/6/2024, 8:48:38 pm*/
+
+
+      //OLD SYNTAX
+      function getcheese(callback) {
+         setTimeout(() => {
+            const cheese = "🧀"
+            console.log('here is cheese', cheese);
+            callback(cheese);
+         }, 2000);
+      }
+      function makedough(cheese, callback) {
+         setTimeout(() => {
+            const dough = cheese + "🍪";
+            console.log("here is the dough", dough);
+            callback(dough);
+         }, 2000);
+      }
+      function bakepizza(dough, callback) {
+         setTimeout(() => {
+            const pizza = dough + "🍕";
+            console.log("here is the pizza", pizza);
+            callback(pizza)
+         }, 2000);
+      }
+      getcheese((cheese) => {
+         makedough(cheese, (dough) => {
+            bakepizza(dough, (pizza) => {
+               console.log("got my pizza", pizza);
+            });
+         });
+      });
+
+      function getcheese() {
+         return new Promise((resolve, reject) => {
+            setTimeout(() => {
+               const cheese = "🧀"
+               resolve(cheese);
+            }, 2000);
+         });
+      }
+
+      function makedough(cheese) {
+         return new Promise((resolve, reject) => {
+            setTimeout(() => {
+               const dough = cheese + "🍪"
+               resolve(dough);
+               // reject("bad cheese");
+            }, 2000);
+         });
+      }
+
+      function bakepizza(dough) {
+         return new Promise((resolve, reject) => {
+            setTimeout(() => {
+               const pizza = dough + "🍕"
+               resolve(pizza)
+            }, 2000);
+         });
+      }
+
+
+      /* getcheese().then((cheese)=>{
+           console.log('here is cheese',cheese);
+           return makedough(cheese)
+       })
+       .then((dough)=>{
+           console.log('here is the dough',dough);
+           return bakepizza(dough);
+       })
+       .then ((pizza)=>{
+           console.log('here is the pizza',pizza);
+       })
+       .catch((data)=>{
+           console.log("error occured",data);
+       })
+       .finally(()=>{
+           console.log("process ended");
+       });*/
+
+      //OR
+
+      /*async function orderpizza() {
+          try{
+          const cheese=await getcheese();
+          console.log('here is cheese',cheese);
+          const dough=await makedough(cheese);
+          console.log('here is the dough',dough);
+          const pizza=await bakepizza(dough);
+          console.log('here is the pizza',pizza);
+      }catch(err){
+          console.log('error occur',err);
+      }
+      console.log("process ended");
+      }
+      
+      orderpizza();*/
    </script>
 </body>
 

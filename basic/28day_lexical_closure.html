@@ -1,13 +1,18 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>lexical scoping and closure</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>lexical scoping and closure</title>
 </head>
+
 <body>
-    <button id="orange">orange</button>
-    <button id="green">green</button>
+  <!-- <button id="orange" onclick="clickhandler('orange')">orange</button>
+  <button id="green " onclick="clickhandler('green')">green</button> -->
+
+  <button id="orange">orange</button>
+  <button id="green">green</button>
 </body>
 <!-- <script>
 /* lexical scoping*/
@@ -52,21 +57,22 @@ myFunc();
 </script> -->
 <script>
 
-// document.getElementById('orange').onclick=function(){
-//     document.body.style.background='orange';
-// }
-// document.getElementById('green').onclick=function(){
-//     document.body.style.background='green';
-// }
+  // document.getElementById('orange').onclick=function(){
+  //     document.body.style.background='orange';
+  // }
+  // document.getElementById('green').onclick=function(){
+  //     document.body.style.background='green';
+  // }
 
-function clickhandler(color){
+  function clickhandler(color) {
     // document.body.style.background=`${color}`;
-    return function(){
-        document.body.style.background=`${color}`;      
+    return function () {
+      document.body.style.background = `${color}`;
     }
 
-}
-document.getElementById('orange').onclick=clickhandler('orange');
-document.getElementById('green').onclick=clickhandler('green');
+  }
+  document.getElementById('orange').onclick = clickhandler('orange');
+  document.getElementById('green').onclick = clickhandler('green');
 </script>
+
 </html>

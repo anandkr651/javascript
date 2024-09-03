@@ -1,26 +1,28 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>chai aur code</title>
 </head>
+
 <body style="background-color: #212121;color: #fff;">
     <ul class="language">
         <li>javascript</li>
     </ul>
 </body>
 <script>
-    function addlanguage(langue){
-       const li = document.createElement('li');
-       li.innerHTML = `${langue}`
-       document.querySelector('.language').appendChild(li)
+    function addlanguage(langue) {
+        const li = document.createElement('li');
+        li.innerHTML = `${langue}`
+        document.querySelector('.language').appendChild(li)
     }
     addlanguage("python")
-    addlanguage("c++")   
+    addlanguage("c++")
 
-    function addOptilanguage(languae){
+    function addOptilanguage(languae) {
         const li = document.createElement('li');
         li.appendChild(document.createTextNode(languae))
         document.querySelector('.language').appendChild(li)
@@ -34,15 +36,16 @@
     console.log(secondlang);
     secondlang.innerHTML = "mojo"
 
-   const newli = document.createElement('li')
-   newli.textContent = "hj"
-   secondlang.replaceWith (newli)
+    const newli = document.createElement('li')
+    newli.textContent = "hj"
+    secondlang.replaceWith(newli)
 
-   const firstlang = document.querySelector("li:first-child")
-   firstlang.outerHTML = '<li>typescript</li>'
+    const firstlang = document.querySelector("li:first-child")
+    firstlang.outerHTML = '<li>typescript</li>'
 
-   //remove
-   const lastlang = document.querySelector('li:last-child')
-   lastlang.remove()
+    //remove
+    const lastlang = document.querySelector('li:last-child')
+    lastlang.remove()
 </script>
+
 </html>

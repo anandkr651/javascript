@@ -1,0 +1,103 @@
+Q 1. why study javascript ?
+      javascript is one of the 3 language all web developer
+      1. HTML to define the content of web pages
+      2. CSS to specify the layout of web page
+      3. JAVASCRIPT to program the behavior of web pages
+      
+    javascript was invented by brendan eich in 1995 and became an ECMA standard in 1997
+    ECMA-262 is the offical name of standard. ECMAScript is the offical name of the language
+      
+Q 2. what is Identifiers ?
+      Identifiers are used to name variables and keywords, and functions.
+      The rules for legal names are the same in most programming languages.
+      
+      A JavaScript name must begin with:
+      A letter (A-Z or a-z)
+      A dollar sign ($)
+      Or an underscore (_)
+      Subsequent characters may be letters, digits, underscores, or dollar signs.
+      Note :--
+        Numbers are not allowed as the first character in names.
+        This way JavaScript can easily distinguish identifiers from numbers.
+
+Q 3. what is the Difference Between var, let and const ?
+               Scope	 Redeclare	 Reassign	Hoisted	 Binds this
+        var	    No	     Yes	     Yes	  Yes	      Yes
+        let	    Yes	      No	     Yes	   No	      No
+        const   Yes	      No	     No	   No	      No
+
+      let and const does not bind to this
+      let and const are not hoisted
+      var is hoisted and bind to this
+      hoisting -> variable defined with var are hoisted to the top and can be initialized at any time.
+      meaning : you can use the variable before it is declared
+      carName = "volve"
+      var carName 
+      jab ham console.log(carName) karete hai tab volve aata hai console mi
+      and let and const give an error when we used this type
+      ------ const ------
+      correct -> const pi=3.141592;
+      incorrect -> const pi;
+      pi=3.141592;
+      
+Q 4. when to use javascript const ?
+      always decelare a variable with const when you know that the value should not be changed.
+      use const when you declare :--
+      * a new Array
+      * a new Object
+      * a new Function
+      * a new RegExp
+      because of this you can NOT
+      - reassign a constant value
+      - reassign a constant array
+      - reassign a constant object
+      but you can
+      - change the elements of constant array
+      - change the properties of constant object
+
+Q 5.when we can assign constant array then how we can change the value of an array ? (Constant Objects and Arrays)
+      The keyword const is a little misleading.
+      It does not define a constant value. It defines a constant reference to a value.
+      Because of this you can NOT:
+      Reassign a constant value
+      Reassign a constant array
+      Reassign a constant object
+      But you CAN:
+      Change the elements of constant array
+      Change the properties of constant object
+
+Q 6. operators are in the javascript
+       LET the value of x is 5
+      Operator	Description	Comparing
+      ==	equal to	x == 8	false	
+                  x == 5	true	
+                  x == "5"	true	
+      ===	equal value and equal type	x === 5	true	
+                                       x === "5"	false	
+      !=	not equal	x != 8	true	
+      !==	not equal value or not equal type	x !== 5	false	
+                                                x !== "5"	true	
+                                                x !== 8	true	
+      >	greater than	x > 8	false	
+      <	less than	x < 8	true	
+      >=	greater than or equal to	x >= 8	false	
+      <=	less than or equal to	x <= 8	true	
+
+
+# setInterval -- The setInterval() method calls a function at specified intervals (in milliseconds).The setInterval() method continues calling the function until clearInterval() is called, or the window is closed.
+syntax --> myInterval = setInterval(function, milliseconds);
+# clearInterval -- The clearInterval() method clears a timer set with the setInterval() method. To clear an interval, use the id returned from setInterval() 
+syntax --> clearInterval(myInterval);
+# setTimeout -- The setTimeout() method calls a function after a number of milliseconds. 1 second = 1000 milliseconds. The setTimeout() is executed only once.If you need repeated executions, use setInterval() instead.
+syntax --> myTimeout = setTimeout(function, milliseconds);
+# clearTimeout -- The clearTimeout() method clears a timer set with the setTimeout() method.
+syntax --> clearTimeout(myTimeout);
+
+# classList -- The classList property returns the CSS classnames of an element.
+# appendChild -- The appendChild() method appends a node (element) as the last child of an element.
+
+# stopPropagation -- The stopPropagation() method prevents propagation of the same event from being called.Propagation means bubbling up to parent elements or capturing down to child elements.
+syntax --> event.stopPropagation()
+# preventDefault -- The preventDefault() method cancels the event if it is cancelable, meaning that the default action that belongs to the event will not occur.  The preventDefault() method does not prevent further propagation of an event through the DOM. Use the stopPropagation() method to handle this.
+
+

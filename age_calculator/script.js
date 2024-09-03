@@ -1,43 +1,46 @@
 let userinput = document.getElementById("date");
-userinput.max = new Date().toLocaleString().split("T")[0];
-let result = document.getElementById("result")
+userinput.max = new Date().toISOString().split("T")[0];
+let result = document.getElementById("result");
 
-function calculateage(){
-    let birthdate = new Date(userinput.value);
+// console.log(new Date()); //Tue Sep 03 2024 19:46:54 GMT+0530 (India Standard Time)
+// console.log(new Date().toISOString()); //2024-09-03T14:17:22.899Z
+// console.log(new Date().toISOString().split("T")[0]); //2024-09-03
 
-    let d1 = birthdate.getDate();
-    let m1 = birthdate.getMonth()+1;
-    let y1 = birthdate.getFullYear();
+function calculateage() {
+  let birthdate = new Date(userinput.value);
 
-    let today = new Date();
+  let d1 = birthdate.getDate();
+  let m1 = birthdate.getMonth() + 1;
+  let y1 = birthdate.getFullYear();
 
-    let d2 = today.getDate();
-    let m2 = today.getMonth()+1;
-    let y2 = today.getFullYear();
+  let today = new Date();
 
-    let m3,d3,y3;
+  let d2 = today.getDate();
+  let m2 = today.getMonth() + 1;
+  let y2 = today.getFullYear();
 
-    y3=y2-y1;
+  let m3, d3, y3;
 
-    if(m2>=m1){
-        m3=m2-m1;
-    }else{
-       y3--;
-       m3 = 12 + m2- m1
-    }
-    if(d2>=d1){
-        d3=d2-d1;
-    }else{
-      m3--;
-      d3=getDaysInMonth(y1,m1)+d2-d1;
-    }
-    if(m3<=0){
-        m3=11;
-        y3--;
-    }
-    function getDaysInMonth(year,month){
-        return new Date(year,month,0).getDate();
-    }
-    result.innerHTML = `you are <span>${y3}</span> year,<span>${m3}</span> months,<span>${d3}</span> days old`
+  y3 = y2 - y1;
+
+  if (m2 >= m1) {
+    m3 = m2 - m1;
+  } else {
+    y3--;
+    m3 = 12 + m2 - m1;
+  }
+  if (d2 >= d1) {
+    d3 = d2 - d1;
+  } else {
+    m3--;
+    d3 = getDaysInMonth(y1, m1) + d2 - d1;
+  }
+  if (m3 < 0) {
+    m3 = 11;
+    y3--;
+  }
+  function getDaysInMonth(year, month) {
+    return new Date(year, month, 0).getDate();
+  }
+  result.innerHTML = `you are <span>${y3}</span> year,<span>${m3}</span> months,<span>${d3}</span> days old`;
 }
-

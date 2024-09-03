@@ -10,6 +10,148 @@
 
 <body>
     <script>
+        function chai() {
+            let username = "anand"
+            // console.log(this.username);
+        }
+        chai()
+
+        const chaia = function () {
+            let username = "anand"
+            // console.log( this.username);
+        }
+        chaia()
+
+        const chaic = () => {
+            let username = "anand"
+            // console.log(this.username);
+        }
+        chaic()
+
+        const addtwo = (num1, num2) => {      //jab ham {} scope ka used karege waha hamko return likhna parega
+            return num1 + num2
+        }
+        //console.log(addtwo(3,4));
+
+        const addtw = (num1, num2) => num1 + num2
+        // console.log(addtw(3,8));
+
+        const addt = (num1, num2) => (num1 + num2)
+        // console.log(addt(3,2));
+
+        const squarea = (num) => num * num;
+        //console.log(squarea(5));
+
+        const squareb = (num) => {
+            return num * num;
+        }
+        //console.log(squareb(8));
+
+        //Different between arrow function and normal function !!
+        //Arrow functions do not have their own this. They are not well suited for defining object methods.
+        const persons = {
+            name: 'Alice',
+            // Using an arrow function for a method
+            greet: () => {
+                // console.log(`Hello, my name is ${this.name}`);
+            }
+        };
+        persons.greet(); // Output: Hello, my name is undefined
+
+        const personz = {
+            name: 'Alice',
+            // Using a regular function for a method
+            greet() {
+                // console.log(`Hello, my name is ${this.name}`);
+            }
+        };
+        personz.greet(); // Output: Hello, my name is Alice
+
+        //Hoisting applies to variable declarations and to function declarations.Because of this, JavaScript functions can be called before they are declared:
+        // console.log(addone(4));  //code execute 5
+        function addone(num) {
+            return num + 1
+        }
+        /*5*/
+
+        //console.log(addotw(5))             //error jab ham function ko variable mi store karete hai decelaration se phele call karete hai to error deteta hai. 
+        const addotw = (num) => {
+            return num + 2
+        }
+        // console.log(addotw(5)) 
+        /*7*/
+
+        const add = (num1, num2) => ({ username: "abc" });
+        // console.log(add(3,2));
+        /*{username: 'abc'}*/
+
+        function one() {
+            const username = "hitesh"
+            function two() {
+                const website = "youtube"
+                // console.log(username);
+                // console.log(website);
+            }
+            // console.log(website);
+            two()
+        }
+        one()
+
+        const x = 12;
+        const b = 4;
+        const aplusb = x + b;
+        // console.log("result",aplusb);
+        const resul = sumoftwonumber(x, b);
+        // console.log('return result',resul);
+
+        function sumoftwonumber(a, b) {
+            const sum = a + b;
+            //console.log("the result are",sum);
+            return sum;
+        }
+
+        function addsquare(a, b) {
+            const sa = square(a);
+            const sb = square(b);
+            function square(num) {
+                return num * num;
+            }
+            return sa + sb;
+        }
+        // console.log(addsquare(3,4));
+
+        function greet() {
+            // console.log("hello world");
+        }
+        greet();
+
+        const greeta = (count) => {
+            for (let i = 0; i < count; i++)
+                console.log("hello world");
+        }
+        // greeta(3);
+
+        const calculate = (a, b, operation) => {
+            return operation(a, b);
+        };
+        //method 1
+        const addition = calculate(3, 4, function (num1, num2) {
+            return num1 + num2;
+        });
+        //console.log(addition);   
+
+        //method 2
+        const subtraction = (a, b) => a - b;
+        const subresult = calculate(8, 3, subtraction);
+        //console.log(subresult);
+
+        //method 3
+        function multiply(a, b) {
+            return a * b;
+        }
+        const mulresult = calculate(3, 2, multiply)
+        //console.log(mulresult); 
+
         function loginusermessage(username = "sam") {     //default value hai yaha sam
             if (username === undefined) {
                 console.log("please enter your username");
@@ -21,6 +163,15 @@
         // console.log(loginusermessage("hitesh"));
         /*sam just logged in
         hitesh just logged in*/
+
+        const mynewarray = [200, 400, 100, 600]
+        function returnsecondvalue(getarray) {
+            return getarray[1]
+        }
+        // console.log(returnsecondvalue(mynewarray));
+        // console.log(returnsecondvalue([200,500,100,600]));
+        /*400
+        500*/
 
         function calculatecartprice(...num1) {        //yaha par ... rest operator hai
             return num1
@@ -44,56 +195,12 @@
         // })    //function call ki ander hi object initilished kiya hai
         /*username is sam and price is 399*/
 
-        const mynewarray = [200, 400, 100, 600]
-        function returnsecondvalue(getarray) {
-            return getarray[1]
-        }
-        // console.log(returnsecondvalue(mynewarray));
-        // console.log(returnsecondvalue([200,500,100,600]));
-        /*400
-        500*/
-
-        let a = 100;
-        if (true) {
-            let a = 10;
-            const b = 20;
-            // console.log("INNER:",a); 
-        }
-        // console.log(a);
-        // console.log(b);
-
-
-        function one() {
-            const username = "hitesh"
-            function two() {
-                const website = "youtube"
-                // console.log(username);
-                // console.log(website);
-            }
-            // console.log(website);
-            two()
-        }
-        one()
-
-        // console.log(addone(4));  //code execute 5
-        function addone(num) {
-            return num + 1
-        }
-        /*5*/
-
-        //console.log(addotw(5))             //error jab ham function ko variable mi store karete hai decelaration se phele call karete hai to error deteta hai. 
-        const addotw = function (num) {
-            return num + 2
-        }
-        // console.log(addotw(5)) 
-        /*7*/
-
         const users = {
             username: "hitesh",
             price: 999,
             welcomemassage: function () {
-                //    console.log(`${this.username},welcome to website`);
-                //     console.log(this);
+                // console.log(`${this.username},welcome to website`);
+                // console.log(this);
             }
         }
         users.welcomemassage()
@@ -106,394 +213,68 @@
 
         // console.log(this);
 
-        function chai() {
-            let username = "anand"
-            // console.log(this.username);
+        //*************** immediately invoked function expression (iife)  ************************
+        // (function chai() {
+        //     // console.log(`DB CONNECTED`);
+        // })();
+        // // chai()
+
+        // (function aurcode() {
+        //     //console.log(`db connection two`);
+        // })();
+
+        // ((name) => {
+        //     //console.log(`db connection two ${name}`);
+        // })('hitesh')
+
+        function person(first, last, age, eye) {
+            this.firstname = first;
+            this.lastname = last;
+            this.personage = age;
+            this.eyecolor = eye;
+            this.nationality = "english"
+            this.fullname = function () {
+                return this.firstname + " " + this.lastname
+            };
         }
-        chai()
+        const myfather = new person("john", "deo", 50, "blue")
+        // console.log("my father age is",myfather.personage);
+        // console.log("my father nationality is",myfather.nationality);
+        /*my father age is 50
+        my father nationality is english*/
 
-        const chaia = function () {
-            let username = "anand"
-            // console.log( this.username);
+        myfather.accountpassword = 1234; //this properties is added to myfather not any other person.
+        // console.log("my father accountpassword is",myfather.accountpassword);
+        /*my father accountpassword is 1234*/
+
+        const mymother = new person("sally", "rally", 47, "blue",)
+        // console.log("my mother last name is",mymother.lastname);
+        /*my mother last name is rally*/
+
+        person.prototype.gmail = "google@gmail.com" //this properties is added to the person
+        // console.log("my father gmail is",myfather.gmail);
+        // console.log("my mother gmail is",mymother.gmail);
+        /*my father gmail is google@gmail.com
+        my mother gmail is google@gmail.com*/
+
+        // console.log(myfather.fullname());
+        /*john deo*/
+
+        mymother.changename = function (name) {
+            this.lastname = name;
         }
-        chaia()
-
-        const chaic = () => {
-            let username = "anand"
-            // console.log(this.username);
+        mymother.changename("deo");
+        //  console.log(mymother.lastname);
+        /*deo*/
+        person.prototype.changename = function (name) {
+            this.lastname = name;
         }
-        chaic()
-
-        const addtwo = (num1, num2) => {              //jab ham {} scope ka used karege waha hamko return likhna parega
-            return num1 + num2
-        }
-        //console.log(addtwo(3,4));
-
-        const addtw = (num1, num2) => num1 + num2
-        // console.log(addtw(3,8));
-
-        const addt = (num1, num2) => (num1 + num2)
-        // console.log(addt(3,2));
-
-
-        const add = (num1, num2) => ({ username: "abc" });
-        // console.log(add(3,2));
-        /*{username: 'abc'}*/
-
-        //immediately invoked function expression (iife)
-
-        (function chai() {
-            // console.log(`DB CONNECTED`);
-        })();
-        // chai()
-
-        (function aurcode() {
-            //console.log(`db connection two`);
-        })();
-
-        ((name) => {
-            //console.log(`db connection two ${name}`);
-        })('hitesh')
-
-        const score = 200
-        if (score > 100) {
-            let power = "fly"
-            // console.log(`user power: ${power}`);
-        }
-        // console.log(`user power: ${power}`); //error
-
-        const useremaila = []
-        if (useremaila) {
-            // console.log("got user email");
-        } else {
-            console.log("donot have user email");
-        }
-
-        const useremailb = "h@email.com"
-        if (useremailb) {
-            // console.log("got user email");
-        } else {
-            console.log("donot have user email");
-        }
-
-        const useremail = ""
-        if (useremail) {
-            console.log("got user email");
-        } else {
-            // console.log("donot have user email");
-        }
-
-        // falsy value
-        //false, 0, -0, bigint 0n,"", null, undefined,Nan
-
-        //truthy values
-        // "0", 'false', " ", [], {}, function(){}
-
-
-        if (useremail.length === 0) {
-            // console.log("array is empty");
-        }
-
-        const emptyObj = {}
-        if (Object.keys(emptyObj).length === 0) {
-            //  console.log("object is empty");
-        }
-
-
-        // false==0             // true
-        // false==""            // true
-        // 0==''                // true
-
-
-        // nullish coalescing operator (??):null undefine
-        let value1;
-        value1 = 5 ?? 10
-        value1 = null ?? 10
-        value1 = undefined ?? 15
-        value1 = null ?? 10 ?? 15
-        // console.log(value1);
-
-        /******* for each, for of,for in, map,filter,reduce ************* */
-        const arr = [1, 2, 3, 4, 5]
-        for (const num of arr) {
-            //  console.log(num);
-        }
-        /*1
-        2
-        3
-        4
-        5*/
-
-        const greeting = "hello world"
-        for (const greet of greeting) {
-            //   console.log(`each char is ${greet}`);
-        }
-        /*each char is h
-        each char is e
-        2 each char is l
-        each char is o
-        each char is 
-        each char is w
-        each char is o
-        each char is r
-        each char is l
-        each char is d*/
-        //maps
-        const map = new Map()
-        map.set('IN', "India")
-        map.set('USA', "united state of america")
-        map.set('FR', "france")
-        map.set('IN', "India")
-        // console.log(map);
-        /*{'IN' => 'India', 'USA' => 'united state of america', 'FR' => 'france'}*/
-
-        for (const [key, value] of map) {
-            // console.log(key , ':-', value);
-        }
-        /*IN :- India
-        USA :- united state of america
-        FR :- france*/
-
-        const myobject = {
-            game1: 'ngj',
-            ame2: 'kklko'
-        }
-        for (const [key, value] in myobject) {
-            // console.log(key , ':-', value);
-        }
-        /*g :- a
-        a :- m*/
-
-        const mobject = {
-            game1: 'ngj',
-            game2: 'kklko',
-            game3: 'jgujk'
-        }
-        for (const key in mobject) {
-            // console.log(`${key} shortcut is for ${mobject[key]}`);
-        }
-        /*game1 shortcut is for ngj
-        game2 shortcut is for kklko
-        game3 shortcut is for jgujk*/
-
-        const myarraya=Object.values(mobject);
-        // console.log(myarraya);
-        /*0:"ngj"
-        1:"kklko"
-        2:"jgujk"*/
-
-        const myarrayb=Object.entries(mobject);
-        // console.log(myarrayb);
-        /*0:(2) ['game1', 'ngj']
-        1:(2) ['game2', 'kklko']
-        2:(2) ['game3', 'jgujk']*/
-
-        const fruits={
-            bananas:300,
-            oranges:200,
-            apples:500
-        };
-        for(let [fruit,value] of Object.entries(fruits)){
-            //  console.log(fruit +" : "+value);
-        }
-        /*bananas : 300
-        oranges : 200
-        apples : 500*/
-
-        const programming = ['js', 'rb', 'py', 'java', 'cpp']
-        for (const key in programming) {
-            // console.log(programming[key]);
-        }
-        /*js
-        rb
-        py
-        java
-        cpp*/
-
-        const coding = ['js', 'rb', 'py', 'java', 'abc']
-        coding.forEach(function (item) {
-            // console.log(item);
-        })
-        /*js
-        rb
-        py
-        java
-        abc*/
-
-        coding.forEach((item) => {
-            // console.log(item);
-        })
-        /*js
-        rb
-        py
-        java
-        abc*/
-
-        function printme(item) {
-            // console.log(item);
-        }
-        coding.forEach(printme)
-        /*js
-        rb
-        py
-        java
-        abc*/
-
-        const value = coding.forEach((item) => {
-            // console.log(item);
-            return item
-        })
-        // console.log(value);
-        /*js
-        rb
-        py
-        java
-        abc
-        undefine*/
-
-        coding.forEach((item, index, arr) => {
-            // console.log(item,index,arr);
-        })
-        /*js 0 (5) ['js', 'rb', 'py', 'java', 'abc']
-        rb 1 (5) ['js', 'rb', 'py', 'java', 'abc']
-        py 2 (5) ['js', 'rb', 'py', 'java', 'abc']
-        java 3 (5) ['js', 'rb', 'py', 'java', 'abc']
-        abc 4 (5) ['js', 'rb', 'py', 'java', 'abc']*/
-
-        const mycoding = [
-            {
-                languagename: "javascript",
-                languagefilename: "js"
-            },
-            {
-                languagename: "python",
-                languagefilename: "py"
-            },
-            {
-                languagename: "java",
-                languagefilename: "java"
-            },
-        ]
-        mycoding.forEach((item) => {
-            // console.log(item.languagename);
-        })
-        /*javascript
-        python
-        java*/
-
-        const mynums = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
-        const newnum = mynums.filter((num) => num > 4)
-        // console.log(newnum);
-        /*[5, 6, 7, 8, 9, 10]*/
-
-        const newnums = mynums.filter((num) => {
-            return num > 7
-        })
-        // console.log(newnums);
-        /*[8, 9, 10]*/
-
-        const nenums = []
-        mynums.forEach((num) => {
-            if (num > 6) {
-                nenums.push(num)
-            }
-        })
-        // console.log(nenums);
-        /*[7, 8, 9, 10]*/
-
-        const books = [
-            {
-                languagename: "javascript",
-                languagefilename: "js",
-                genre: "history",
-                publish: "2006",
-                edition: "1999"
-            },
-            {
-                languagename: "python",
-                languagefilename: "py",
-                genre: "history",
-                publish: "2001",
-                edition: "1956"
-            },
-            {
-                languagename: "java",
-                languagefilename: "java",
-                genre: "civis",
-                publish: "2005",
-                edition: "1947"
-            },
-        ];
-        const userbooks = books.filter((bk) => bk.genre === "history")
-        // console.log(userbooks);
-        /*0:{languagename: 'javascript', languagefilename: 'js', genre: 'history', publish: '2006', edition: '1999'}
-        1:{languagename: 'python', languagefilename: 'py', genre: 'history', publish: '2001', edition: '1956'}*/
-
-        let usebooks = books.filter((bk) => {
-            return bk.publish >= 2000 && bk.genre === "history"
-        })
-        // console.log(usebooks);
-        /*0:{languagename: 'javascript', languagefilename: 'js', genre: 'history', publish: '2006', edition: '1999'}
-        1:{languagename: 'python', languagefilename: 'py', genre: 'history', publish: '2001', edition: '1956'}*/
-
-        const mynumers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
-        const newnumes = mynumers.map((num) => num > 5)
-        // console.log(newnumes);
-        /*[false, false, false, false, false, true, true, true, true, true]*/
-
-        const mnumers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
-        const nwnumes = mnumers.map((num) => num + 10)  //it does not change in the original array
-        // console.log(nwnumes);
-        /*[11, 12, 13, 14, 15, 16, 17, 18, 19, 20]*/
-        const abc=mnumers.every((num)=>num>10) //the every() method checks if all arrays values pass a test
-        // console.log(abc);
-        /*false*/
-        const ab=mnumers.some((num)=>num>7) //the some() method checks if some arrays values pass a test
-        // console.log(ab);
-        /*true*/
-
-        const newnms = mynumers
-            .map((num) => num * 10)
-            .map((num) => num + 1)
-            .filter((num) => num >= 41)
-        // console.log(newnms);
-        /*[41, 51, 61, 71, 81, 91, 101]*/
-
-        const myums = [1, 2, 3]
-        const mytotal = myums.reduce(function (acc, currval) {
-            // console.log(`acc:${acc} and currval: ${currval}`);
-            return acc + currval
-        }, 0)
-        // console.log(mytotal);
-        /*acc:0 and currval: 1
-        acc:1 and currval: 2
-        acc:3 and currval: 3
-        6*/
-
-        const mytota = myums.reduce((acc, curr) => acc + curr, 0)
-        // console.log(mytota);
-
-        const shoppingcart = [
-            {
-                itemname: "js course",
-                price: 100
-            },
-            {
-                itemname: "c++ course",
-                price: 500
-            },
-            {
-                itemname: "python",
-                price: 900
-            },
-            {
-                itemname: "datascience",
-                price: 300
-            },
-        ]
-        const pricetopay = shoppingcart.reduce((acc, item) => acc + item.price, 0)
-        //   console.log(pricetopay);
-          /*1080*/    
+        mymother.changename("rsp");
+        myfather.changename("pqrs");
+        //  console.log(mymother.lastname);
+        //  console.log(myfather.lastname);
+        /*rsp
+        pqrs*/
     </script>
 </body>
 

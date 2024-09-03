@@ -10,71 +10,56 @@
 
 <body>
     <script>
-/*javascript has 8 datatypes
-string
-number
-bigint
-boolean
-undefine
-null
-symbol
-object*/
-/* ----- the object datatypes
-the object data type can contain both build-in-object and user defined objects.
-build-in-object types can be :
-objects, arrays,dates,maps,sets,intarrays,floatarrays,promises,and etc*/
-/*    -------- difference between array and object ----------
-in javascript, array use numbered indexes person[0]
-in javascript, object use named index person["full_name"] or person.full_name*/
+        /*javascript has 8 datatypes
+        string
+        number
+        bigint
+        boolean
+        undefine
+        null
+        symbol
+        object*/
+        /* ----- the object datatypes
+        the object data type can contain both build-in-object and user defined objects.
+        build-in-object types can be :
+        objects, arrays,dates,maps,sets,intarrays,floatarrays,promises,and etc*/
+        /*    -------- difference between array and object ----------
+        in javascript, array use numbered indexes person[0]
+        in javascript, object use named index person["full_name"] or person.full_name*/
 
-        const points=new Array(10,20,30);
-        // console.log(points);
-        /*[10, 20, 30]*/
-        const point=[10,20,30];
-        // console.log(point);
-        /*[10, 20, 30]*/
+        const word = ["apple", 'banana', 'cherry'];
+        //console.log(word[2]);
 
-        /* there is a big different between them*/
-        const poins=new Array(10);
-        // console.log(poins);
-        /*[empty × 10]*/
-        const poin=[10];
-        // console.log(poin);
-        /*[10]*/
+        const words = ["apple", 'banana', 'cherry', 12, true, {
+            name: 'anand'
+        },
+            function hello() {
+                console.log('hello world');
+            }
+        ];
+        const newwords = words;
+        newwords[1] = "kiwi";
 
+        //  console.log(words);
+        //  console.log(newwords);
+        //  console.log(words.length);
+        /*0:"apple"
+        1:"kiwi"
+        2:"cherry"
+        3:12
+        4:true
+        5:{name: 'anand'}
+        6:ƒ hello()
 
-        let myarray = new Array(9, 1, 5, 2, 89, 91)
-        myarray.push(6);
-        myarray.pop();
-        myarray.unshift(9);
-        myarray.shift();
-        // console.log(myarray);
-        // console.log(myarray.includes(9));
-        // console.log(myarray.indexOf(3));
-
-        const newarr = myarray.join()
-        // console.log(myarray);
-        // console.log(newarr);
-        // console.log( typeof newarr);
-        /*description
-        the join() method return an array as a string.
-        the join() method does not change the original array.
-        any seperator can be specified. the default is comma(,).*/
-        /*[9, 1, 5, 2, 89, 91]
-        9,1,5,2,89,91
-        string*/
-
-        //slice,splice
-        // console.log("A",myarray);
-
-        const mya1 = myarray.slice(2, 4);
-        // console.log(mya1);
-        // console.log("B",myarray);
-
-        const mya2 = myarray.splice(2, 3)
-        // console.log(mya2);        //remove the element from 2 to 3
-        // console.log("C", myarray);  //bacca hua elements in myarray
-
+        0:"apple"
+        1:"kiwi"
+        2:"cherry"
+        3:12
+        4:true
+        5:{name: 'anand'}
+        6:ƒ hello()
+        
+        7*/
 
         const marvel_heros = ["thor", "ironman", "spiderman"];
         const dc_heros = ['superman', "flash", "batman"];
@@ -118,16 +103,126 @@ in javascript, object use named index person["full_name"] or person.full_name*/
         // console.log(realanotherarray );
         /*[1, 2, 3, 4, 5, 6, 7, 6, 7, 4, 5]*/
 
-/*NOTES :--  arrays are not constants
-*the keyword const is a little misleading.
-*it does not define a constant array. it defines a constant reference to an array.
-*because of this we can still change the elements of a constant array*/
+        /*NOTES :--  arrays are not constants
+        *the keyword const is a little misleading.
+        *it does not define a constant array. it defines a constant reference to an array.
+        *because of this we can still change the elements of a constant array*/
 
-        const fruits=["banana","oranges","apples"];
-        // console.log(fruits);
-        // console.log(typeof fruits);
-        // console.log(Array.isArray(fruits));
-        // console.log(fruits instanceof Array); //the instance of operator returns true if an object is an instance of a specified object types
+        const points = new Array(10, 20, 30);
+        // console.log(points);
+        /*[10, 20, 30]*/
+
+        const point = [10, 20, 30];
+        // console.log(point);
+        /*[10, 20, 30]*/
+
+        /* there is a big different between them*/
+        const poins = new Array(10);
+        // console.log(poins);
+        /*[empty × 10]*/
+
+        const poin = [10];
+        // console.log(poin);
+        /*[10]*/
+
+        const num = [4, 1, 5, 8, 0, 6, 8];
+        // console.log(typeof(num));
+        // console.log(num.indexOf(8));
+        // console.log(num.indexOf(3));
+        // console.log(num.includes(8));
+        /*object
+        3
+        -1
+        true*/
+
+        num.push("anuj");   //to add in the last
+        // console.log(num);
+
+        num.unshift("anand");   //to add in the first
+        //console.log(num);
+
+        num.pop();        //to remove in the last
+        //console.log(num);
+
+        num.shift();     //to remove in the first
+        //console.log(num);
+
+        num.sort();    //it can be sort the data of an array
+        // console.log(num);
+
+        const numx = [4, 1, 5, 8, 0, 6, 8];
+        const subarray = numx.slice(2, 5)   //2nd,3rd,4th
+        // console.log(subarray);
+        // console.log(numx);
+        /*[5, 8, 0]
+        [4, 1, 5, 8, 0, 6, 8]*/
+
+        const nums = [4, 1, 5, 8, 0, 6, 8];
+        const suarray = nums.splice(2, 4) //delete the data starting from 2 index and count 4 
+        // console.log(suarray);
+        // console.log(nums);
+        /*[5, 8, 0, 6]
+        [4, 1, 8]*/
+
+        let myarray = new Array(9, 1, 5, 2, 89, 91)
+        myarray.push(6);
+        myarray.pop();
+        myarray.unshift(9);
+        myarray.shift();
+        // console.log(myarray);
+        // console.log(myarray.includes(9));
+        // console.log(myarray.indexOf(3));
+
+        const newarr = myarray.join()
+        // console.log(myarray);
+        // console.log(newarr);
+        // console.log( typeof newarr);
+        /*description
+        the join() method return an array as a string.
+        the join() method does not change the original array.
+        any seperator can be specified. the default is comma(,).*/
+        /*[9, 1, 5, 2, 89, 91]
+        9,1,5,2,89,91
+        string*/
+
+        const ba = [4, 1, 6, -2, -5, 3, 2, -8, 6, 7];
+
+        const firstneg = (num) => {
+            return num < 0;
+        }
+        const bresult = ba.find(firstneg);
+        //  console.log(bresult);
+        /*-2*/
+
+        const cresulta = ba.findIndex(firstneg);
+        //  console.log(cresulta);
+        /*3*/
+
+        ba.forEach((num, i) => {
+            // console.log("arraynum",num,i);
+        });
+        /*arraynum 4 0
+        arraynum 1 1
+        arraynum 6 2
+        arraynum -2 3
+        arraynum -5 4
+        arraynum 3 5
+        arraynum 2 6
+        arraynum -8 7
+        arraynum 6 8
+        arraynum 7 9*/
+
+        /* How do I know if a variable is an array?
+        The problem is that the JavaScript operator typeof returns "object"
+        To solve this problem ECMAScript 5 (JavaScript 2009) defined a new method Array.isArray()
+        The instanceof operator returns true if an object is created by a given constructor:
+        */
+
+        const fruit = ["banana", "oranges", "apples"];
+        // console.log(fruit);
+        // console.log(typeof fruit);
+        // console.log(Array.isArray(fruit));
+        // console.log(fruit instanceof Array); //the instance of operator returns true if an object is an instance of a specified object types
         /*['banana', 'oranges', 'apples']
         object
         true
@@ -144,8 +239,306 @@ in javascript, object use named index person["full_name"] or person.full_name*/
         // console.log(Array.of(a,b,c));
         /*[100, 200, 300]*/
 
-        const mysym = Symbol('key1')
 
+        /******* for each, for of,for in, map,filter,reduce ************* */
+        const arr = [1, 2, 3, 4, 5]
+        for (const num of arr) {
+            //  console.log(num);
+        }
+        /*1
+        2
+        3
+        4
+        5*/
+
+        const greeting = "hello world"
+        for (const greet of greeting) {
+            //   console.log(`each char is ${greet}`); //NOTE --> Automatic replacing of variables with real values is called string interpolation.
+        }
+        /*each char is h
+        each char is e
+        2 each char is l
+        each char is o
+        each char is 
+        each char is w
+        each char is o
+        each char is r
+        each char is l
+        each char is d*/
+        //maps
+        const map = new Map()
+        map.set('IN', "India")
+        map.set('USA', "united state of america")
+        map.set('FR', "france")
+        map.set('IN', "India")
+        // console.log(map);
+        /*{'IN' => 'India', 'USA' => 'united state of america', 'FR' => 'france'}*/
+
+        for (const [key, value] of map) {
+            // console.log(key , ':-', value);
+        }
+        /*IN :- India
+        USA :- united state of america
+        FR :- france*/
+
+        const myobject = {
+            game1: 'ngj',
+            ame2: 'kklko'
+        }
+        for (const [key, value] in myobject) {
+            // console.log(key , ':-', value);
+        }
+        /*g :- a
+        a :- m*/
+
+        const mobject = {
+            game1: 'ngj',
+            game2: 'kklko',
+            game3: 'jgujk'
+        }
+        for (const key in mobject) {
+            // console.log(`${key} shortcut is for ${mobject[key]}`);
+        }
+        /*game1 shortcut is for ngj
+        game2 shortcut is for kklko
+        game3 shortcut is for jgujk*/
+
+        const myarraya = Object.values(mobject);
+        // console.log(myarraya);
+        /*0:"ngj"
+        1:"kklko"
+        2:"jgujk"*/
+
+        const myarrayb = Object.entries(mobject);
+        // console.log(myarrayb);
+        /*0:(2) ['game1', 'ngj']
+        1:(2) ['game2', 'kklko']
+        2:(2) ['game3', 'jgujk']*/
+
+        const fruits = {
+            bananas: 300,
+            oranges: 200,
+            apples: 500
+        };
+        for (let [fruit, value] of Object.entries(fruits)) {
+            //  console.log(fruit +" : "+value);
+        }
+        /*bananas : 300
+        oranges : 200
+        apples : 500*/
+
+        const programming = ['js', 'rb', 'py', 'java', 'cpp']
+        for (const key in programming) {
+            // console.log(programming[key]);
+        }
+        /*js
+        rb
+        py
+        java
+        cpp*/
+
+        const coding = ['js', 'rb', 'py', 'java', 'abc']
+        coding.forEach(function (item) {
+            // console.log(item);
+        })
+        /*js
+        rb
+        py
+        java
+        abc*/
+
+        coding.forEach((item) => {
+            // console.log(item);
+        })
+        /*js
+        rb
+        py
+        java
+        abc*/
+
+        function printme(item) {
+            // console.log(item);
+        }
+        coding.forEach(printme)
+        /*js
+        rb
+        py
+        java
+        abc*/
+
+        const value = coding.forEach((item) => {
+            // console.log(item);
+            return item
+        })
+        // console.log(value);
+        /*js
+        rb
+        py
+        java
+        abc
+        undefine*/
+
+        coding.forEach((item, index, arr) => {
+            // console.log(item,index,arr);
+        })
+        /*js 0 (5) ['js', 'rb', 'py', 'java', 'abc']
+        rb 1 (5) ['js', 'rb', 'py', 'java', 'abc']
+        py 2 (5) ['js', 'rb', 'py', 'java', 'abc']
+        java 3 (5) ['js', 'rb', 'py', 'java', 'abc']
+        abc 4 (5) ['js', 'rb', 'py', 'java', 'abc']*/
+
+        const mycoding = [
+            {
+                languagename: "javascript",
+                languagefilename: "js"
+            },
+            {
+                languagename: "python",
+                languagefilename: "py"
+            },
+            {
+                languagename: "java",
+                languagefilename: "java"
+            },
+        ]
+        mycoding.forEach((item) => {
+            // console.log(item.languagename);
+        })
+        /*javascript
+        python
+        java*/
+
+        const mynums = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+        const newnum = mynums.filter((num) => num > 4)
+        // console.log(newnum);
+        /*[5, 6, 7, 8, 9, 10]*/
+
+        const newnums = mynums.filter((num) => {
+            return num > 7
+        })
+        // console.log(newnums);
+        /*[8, 9, 10]*/
+
+        const nenums = []
+        mynums.forEach((num) => {
+            if (num > 6) {
+                nenums.push(num)
+            }
+        })
+        // console.log(nenums);
+        /*[7, 8, 9, 10]*/
+
+        const books = [
+            {
+                languagename: "javascript",
+                languagefilename: "js",
+                genre: "history",
+                publish: "2006",
+                edition: "1999"
+            },
+            {
+                languagename: "python",
+                languagefilename: "py",
+                genre: "history",
+                publish: "2001",
+                edition: "1956"
+            },
+            {
+                languagename: "java",
+                languagefilename: "java",
+                genre: "civis",
+                publish: "2005",
+                edition: "1947"
+            },
+        ];
+        const userbooks = books.filter((bk) => bk.genre === "history")
+        // console.log(userbooks);
+        /*0:{languagename: 'javascript', languagefilename: 'js', genre: 'history', publish: '2006', edition: '1999'}
+        1:{languagename: 'python', languagefilename: 'py', genre: 'history', publish: '2001', edition: '1956'}*/
+
+        let usebooks = books.filter((bk) => {
+            return bk.publish >= 2000 && bk.genre === "history"
+        })
+        // console.log(usebooks);
+        /*0:{languagename: 'javascript', languagefilename: 'js', genre: 'history', publish: '2006', edition: '1999'}
+        1:{languagename: 'python', languagefilename: 'py', genre: 'history', publish: '2001', edition: '1956'}*/
+
+        const mynumers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+        const newnumes = mynumers.map((num) => num > 5)
+        // console.log(newnumes);
+        /*[false, false, false, false, false, true, true, true, true, true]*/
+
+        const mnumers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+        const nwnumes = mnumers.map((num) => num + 10)  //it does not change in the original array
+        // console.log(nwnumes);
+        /*[11, 12, 13, 14, 15, 16, 17, 18, 19, 20]*/
+        const abc = mnumers.every((num) => num > 10) //the every() method checks if all arrays values pass a test
+        // console.log(abc);
+        /*false*/
+        const ab = mnumers.some((num) => num > 7) //the some() method checks if some arrays values pass a test
+        // console.log(ab);
+        /*true*/
+
+        const newnms = mynumers
+            .map((num) => num * 10)
+            .map((num) => num + 1)
+            .filter((num) => num >= 41)
+        // console.log(newnms);
+        /*[41, 51, 61, 71, 81, 91, 101]*/
+
+        const myums = [1, 2, 3]
+        const mytotal = myums.reduce(function (acc, currval) {
+            // console.log(`acc:${acc} and currval: ${currval}`);
+            return acc + currval
+        }, 0)
+        // console.log(mytotal);
+        /*acc:0 and currval: 1
+        acc:1 and currval: 2
+        acc:3 and currval: 3
+        6*/
+
+        const mytota = myums.reduce((acc, curr) => acc + curr, 0)
+        // console.log(mytota);
+
+        const shoppingcart = [
+            {
+                itemname: "js course",
+                price: 100
+            },
+            {
+                itemname: "c++ course",
+                price: 500
+            },
+            {
+                itemname: "python",
+                price: 900
+            },
+            {
+                itemname: "datascience",
+                price: 300
+            },
+        ]
+        const pricetopay = shoppingcart.reduce((acc, item) => acc + item.price, 0)
+        //   console.log(pricetopay);
+        /*1080*/
+
+
+        // ***************************  starting object  **********************************************
+        let myyoutubename = "anandbhagat.com"
+        let anothername = myyoutubename
+        anothername = "kumaranand"
+        // console.log(myyoutubename);     //anandbhagat.com
+        //  console.log(anothername);      //kumaranand
+
+        let userone = {
+            email: 'user@google.com'
+        }
+        let usertwo = userone;                 //address of userone
+        usertwo.email = 'kumaranand@gmail.com';
+        // console.log(userone.email);        //kumaranand@gmail.com
+        // console.log(usertwo.email);        //kumaranand@gmail.com
+
+        const mysym = Symbol('key1')
         const jsuser = {
             accountid: 1435666666,
             "full name": "anand kumar",   // "full_name"  tab access ho jaya ga dot se 
@@ -177,12 +570,22 @@ in javascript, object use named index person["full_name"] or person.full_name*/
         }
         jsuser.greeting();
 
-
         jsuser.greetingtwo = function () {
             // console.log(`hello js user,${this.accountcity}`);
         }
         // console.log(jsuser.greetingtwo());
 
+        const regularuser = {
+            email: "some@gmail.com",
+            fullname: {
+                userfullname: {
+                    firstname: "hitesh",
+                    lastname: "choudhary"
+                }
+            }
+        }
+        // console.log(regularuser.fullname.userfullname.lastname);
+        /*choudhary*/
 
         const tinderuser = new Object()
         // console.log(tinderuser);
@@ -208,17 +611,13 @@ in javascript, object use named index person["full_name"] or person.full_name*/
         // console.log(tinderusera.hasOwnProperty('isloggein'));
         /*true*/
 
-        const regularuser = {
-            email: "some@gmail.com",
-            fullname: {
-                userfullname: {
-                    firstname: "hitesh",
-                    lastname: "choudhary"
-                }
-            }
-        }
-        // console.log(regularuser.fullname.userfullname.lastname);
-        /*choudhary*/
+        const persona = {
+            name: "John",
+            age: 30,
+            city: "New York"
+        };
+        // console.log(JSON.stringify(persona));
+        //{"name":"John","age":30,"city":"New York"}
 
         const obj1 = { 1: "a", 2: "b" }
         const obj2 = { 3: "a", 4: "b" }
@@ -237,6 +636,19 @@ in javascript, object use named index person["full_name"] or person.full_name*/
         // console.log(obj3);
         /*{1: 'a', 2: 'b', 3: 'a', 4: 'b'}*/
 
+        const person = {
+            name: "John",
+            age: 30,
+            city: "New York"
+        };
+        // Build a Text
+            let text = "";
+            for (let x in person) {
+                text += person[x] + " ";
+            };
+            // console.log(text);
+            //John 30 New York 
+
         const users = [
             {
                 id: 1,
@@ -254,64 +666,77 @@ in javascript, object use named index person["full_name"] or person.full_name*/
         // console.log(users[2].email);
         /*av@gmail.com*/
 
+        const gamename = new String('hitesh-hc-jabncb-Mnkjh');     //string is used in object
+        // console.log(gamename);
+        // console.log(typeof gamename);          //object
+
+        // console.log(gamename.__proto__);
+
+        // console.log(gamename[3]);
+        // console.log(gamename.length);
+        // console.log(gamename.toUpperCase());
+        // console.log(gamename.charAt(2));
+        // console.log(gamename.at(2));
+        // console.log(gamename.charCodeAt(0));   //the charCodeAt() method returns the unicode of the character at a given position in a string.
+        // console.log(gamename.indexOf('h'));
+        // console.log(gamename.lastIndexOf('h'));
+        // console.log(gamename.split('-'));
+        // console.log(gamename.substr(7));
+        // console.log(gamename.search("hc"));
+        // console.log(gamename.match("hc"));
+        // console.log(gamename.startsWith("hitesh"));
+        // console.log(gamename.endsWith("hitesh"));
+
+        /*e
+        22
+        HITESH-HC-JABNCB-MNKJH
+        t
+        t
+        104
+        0
+        21
+        ['hitesh', 'hc', 'jabncb', 'Mnkjh']
+        hc-jabncb-Mnkjh
+        7
+        ['hc', index: 7, input: 'hitesh-hc-jabncb-Mnkjh', groups: undefined]
+        true
+        false*/
+
+        const newstring = gamename.substring(0, 4);        //4th not acess 
+        // console.log(newstring);
+        /*hite*/
+
+        const anotherstring = gamename.slice(1, 4)
+        // console.log(anotherstring);
+        /*ite*/
+
         const course = {
             coursename: "js in hindi",
             price: "999",
             courseinstructor: "hitesh"
         }
-
+        // Destructuring
         const { courseinstructor } = course
         // console.log(courseinstructor);
         /*hitesh*/
 
-        function person(first,last,age,eye){
-         this.firstname=first;
-         this.lastname=last;
-         this.personage=age;
-         this.eyecolor=eye;
-         this.nationality="english"
-         this.fullname=function(){
-            return this.firstname+" "+this.lastname
-         };
-        }
-        const myfather=new person("john","deo",50,"blue")
-        // console.log("my father age is",myfather.personage);
-        // console.log("my father nationality is",myfather.nationality);
-        /*my father age is 50
-        my father nationality is english*/
+        const frut = ["Bananas", "Oranges", "Apples", "Mangos","lemon"];
 
-        myfather.accountpassword=1234; //this properties is added to myfather not any other person.
-        // console.log("my father accountpassword is",myfather.accountpassword);
-        /*my father accountpassword is 1234*/
+        // Destructuring
+        let [fruit1,,,fruit2] = frut;
+        // console.log( fruit1 + " " + fruit2);
+        //Bananas Mangos
 
-        const mymother=new person("sally","rally",47,"blue",)
-        // console.log("my mother last name is",mymother.lastname);
-        /*my mother last name is rally*/
-
-        person.prototype.gmail="google@gmail.com" //this properties is added to the person
-        // console.log("my father gmail is",myfather.gmail);
-        // console.log("my mother gmail is",mymother.gmail);
-        /*my father gmail is google@gmail.com
-        my mother gmail is google@gmail.com*/
-
-        // console.log(myfather.fullname());
-        /*john deo*/
-
-         mymother.changename=function(name){
-            this.lastname=name;
-         }
-         mymother.changename("deo");
-        //  console.log(mymother.lastname);
-         /*deo*/
-         person.prototype.changename=function(name){
-            this.lastname=name;
-         }
-         mymother.changename("rsp");
-         myfather.changename("pqrs");
-        //  console.log(mymother.lastname);
-        //  console.log(myfather.lastname);
-         /*rsp
-         pqrs*/
+        const personz = {
+            firstName: "John",
+            lastName: " Doe",
+            age: 50
+        };
+        // Destructuring
+        let {lastName, firstName} = personz;
+        // console.log(firstName + lastName);
+        //John Doe
+        
     </script>
 </body>
 
