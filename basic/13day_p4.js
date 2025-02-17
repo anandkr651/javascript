@@ -42,20 +42,24 @@ document.querySelector("#images").addEventListener(
   "click",
   function (e) {
     console.log(e.target.parentNode);
-    let removeit = e.target.parentNode;
-    removeit.remove();
+    // let removeit = e.target.parentNode;
+    // removeit.remove();
+    //OR
+    
+    console.log(e.target.parentElement);
+    e.target.parentElement.remove()
   },
   false
 );
 
-document.querySelector("#images").addEventListener(
-  "click",
-  function (e) {
-    console.log(e.target.tagName);
-    if (e.target.tagName === "IMG") {
-      let removeit = e.target.parentNode;
-      removeit.remove();
-    }
-  },
-  false
-);
+// document.querySelector("#images").addEventListener(
+//   "click",
+//   function (e) {
+//     console.log(e.target.tagName);
+//     if (e.target.tagName === "IMG") {
+//       let removeit = e.target.parentNode;
+//       removeit.remove();
+//     }
+//   },
+//   false
+// );

@@ -14,6 +14,8 @@ showtask();
 createbtn.addEventListener("click", () => {
   let inputbox = document.createElement("p");
   let image = document.createElement("img");
+  // inputbox.classList.add("input-box");
+  //OR
   inputbox.className = "input-box";
   inputbox.setAttribute("contenteditable", "true");
   image.src = "delete.png";
@@ -40,7 +42,12 @@ document.addEventListener("keydown",(event)=>{
 
 notecontainer.addEventListener("click", function (e) {
   if (e.target.tagName === "IMG") {
-    e.target.parentElement.remove();
+    // console.log(e.target.parentElement);
+    // e.target.parentElement.remove();
+    //OR
+    
+    e.target.parentNode.remove();
+    console.log(e.target.parentNode);
     savedata();
   }
 });

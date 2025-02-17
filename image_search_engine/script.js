@@ -28,7 +28,7 @@ async function searchimages() {
     image.src = result.urls.small;
     const imagelink = document.createElement("a");
     imagelink.href = result.links.html;
-    imagelink.target = "_blank";
+    imagelink.target = "_blank"; //_blank -->another tabs, _self --> same tabs
 
     imagelink.appendChild(image);
     searchresult.appendChild(imagelink);

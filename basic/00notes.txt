@@ -83,11 +83,28 @@ Q 6. operators are in the javascript
       >=	greater than or equal to	x >= 8	false	
       <=	less than or equal to	x <= 8	true	
 
+typecasting --> let score="33" -->let x = Number(score) , console.log(typeof(x))-->number
+always start with capital letter.
+
+Different between arrow function and normal function !!
+Arrow functions do not have their own this. They are not well suited for defining object methods.
+
+1. title
+        <h1 id=​"title" class=​"heading">​"Dom learning on chai aur code "<span style=​"display:​ none ;​">​test text​</span>​</h1>​
+2. title.textContent
+        'Dom learning on chai aur code test text'
+3. title.innerHTML
+        'Dom learning on chai aur code <span style="display: none ;">test text</span>'
+4. title.innerText
+        'Dom learning on chai aur code'
+
+.setAttribute("title", "generated title")
 
 # setInterval -- The setInterval() method calls a function at specified intervals (in milliseconds).The setInterval() method continues calling the function until clearInterval() is called, or the window is closed.
-syntax --> myInterval = setInterval(function, milliseconds);
+syntax --> myInterval = setInterval(function(){}, milliseconds);
 # clearInterval -- The clearInterval() method clears a timer set with the setInterval() method. To clear an interval, use the id returned from setInterval() 
 syntax --> clearInterval(myInterval);
+
 # setTimeout -- The setTimeout() method calls a function after a number of milliseconds. 1 second = 1000 milliseconds. The setTimeout() is executed only once.If you need repeated executions, use setInterval() instead.
 syntax --> myTimeout = setTimeout(function, milliseconds);
 # clearTimeout -- The clearTimeout() method clears a timer set with the setTimeout() method.
@@ -99,5 +116,3 @@ syntax --> clearTimeout(myTimeout);
 # stopPropagation -- The stopPropagation() method prevents propagation of the same event from being called.Propagation means bubbling up to parent elements or capturing down to child elements.
 syntax --> event.stopPropagation()
 # preventDefault -- The preventDefault() method cancels the event if it is cancelable, meaning that the default action that belongs to the event will not occur.  The preventDefault() method does not prevent further propagation of an event through the DOM. Use the stopPropagation() method to handle this.
-
-

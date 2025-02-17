@@ -1,19 +1,34 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>W3School</title>
+    <title>onclick Example</title>
 </head>
 
 <body>
-    <button onclick="window.print()">Print this page</button>
+    <button class="btn">Click me</button>
+    <!-- <button onclick="myFunction()">Click me</button> -->
+
+    <script>
+        function myFunction() {
+            alert("Function called using myFunction as a reference");
+            // return function(){
+            // }
+        }
+        const btn= document.querySelector('.btn');
+        btn.addEventListener('click',()=>{
+            alert("hiii");
+        })
+
+        // Setting the event handler using JavaScript
+        // document.getElementById("myButton").onclick = myFunction;
+
+
+        // function myFunction() {
+        //     alert("Function called using myFunction()");
+        // }
+    </script>
+
 </body>
 
 </html>
-<script>
-    document.write(5 + 6);
-    window.alert(5 + 6);
-</script>

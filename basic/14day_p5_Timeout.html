@@ -16,11 +16,22 @@
     const sayhitesh = function () {
         console.log("hitesh");
     }
-    const changetext = function () {
+    // const changetext = function () {
+    //     document.querySelector('h1').innerHTML = "best js series"
+    // }
+    // const changeme = setTimeout(changetext, 3000)
+
+    //OR
+    // function changetext() {
+    //     document.querySelector('h1').innerHTML = "best js series"
+    // }
+    // const changeme = setTimeout(changetext, 3000)
+   
+    //OR
+    const changetext = ()=> {
         document.querySelector('h1').innerHTML = "best js series"
     }
     const changeme = setTimeout(changetext, 3000)
-
 
     document.querySelector('#stop').addEventListener('click', function () {
         clearTimeout(changeme)

@@ -30,13 +30,9 @@ box1.addEventListener("click", () => {
 });
 
 const container = document.getElementById("container");
-container.addEventListener(
-  "click",
-  () => {
+container.addEventListener("click",() => {
     console.log("click on container");
-  },
-  true
-);
+  },true);
 
 const nameinput = document.getElementById("nameinput");
 nameinput.addEventListener("keypress", (e) => {
