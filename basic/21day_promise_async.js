@@ -1,3 +1,5 @@
+/*  ----------------------- this is the concept of event loop -----------------------------*/
+
 // console.log("anand");
 // setTimeout(function() {
 //     console.log("this is a boy");
@@ -5,9 +7,10 @@
 // console.log("kumar");
 // console.log("bhagat");
 /*anand
-      kumar
-      bhagat
-      this is a boy*/
+  kumar
+  bhagat
+  this is a boy
+*/
 
 // const Promiseone = new Promise(function (resolve, reject) {
 //   //do an async task

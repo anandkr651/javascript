@@ -24,7 +24,7 @@ Q 3. what is the Difference Between var, let and const ?
                Scope	 Redeclare	 Reassign	Hoisted	 Binds this
         var	    No	     Yes	     Yes	  Yes	      Yes
         let	    Yes	      No	     Yes	   No	      No
-        const   Yes	      No	     No	   No	      No
+        const       Yes	      No	     No	           No	      No
 
       let and const does not bind to this
       let and const are not hoisted
@@ -34,6 +34,15 @@ Q 3. what is the Difference Between var, let and const ?
       carName = "volve"
       var carName 
       jab ham console.log(carName) karete hai tab volve aata hai console mi
+
+      Hoisting is JavaScript's default behavior of moving all declarations to the top of the current scope (to the top of the current script or the current function).
+      The let and const Keywords
+       Variables defined with let and const are hoisted to the top of the block, but not initialized.
+       Meaning: The block of code is aware of the variable, but it cannot be used until it has been declared.
+       Using a let variable before it is declared will result in a ReferenceError.
+       The variable is in a "temporal dead zone" from the start of the block until it is declared:
+
+
       and let and const give an error when we used this type
       ------ const ------
       correct -> const pi=3.141592;

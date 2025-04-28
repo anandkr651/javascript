@@ -14,7 +14,7 @@
   <button id="orange">orange</button>
   <button id="green">green</button>
 </body>
-<!-- <script>
+<script>
 /* lexical scoping*/
 
 //     function init() {
@@ -53,10 +53,13 @@ function makeFunc() {
 }
 
 const myFunc = makeFunc();
-myFunc();
-</script> -->
-<script>
+console.log(myFunc());
 
+
+</script>
+
+
+<!-- <script>
   // document.getElementById('orange').onclick=function(){
   //     document.body.style.background='orange';
   // }
@@ -69,10 +72,9 @@ myFunc();
     return function () {
       // document.body.style.background = `${color}`;
     }
-
   }
   document.getElementById('orange').onclick = clickhandler('orange');
   document.getElementById('green').onclick = clickhandler('green');
-</script>
+</script> -->
 
 </html>
